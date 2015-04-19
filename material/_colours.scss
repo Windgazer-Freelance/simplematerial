@@ -1,0 +1,33 @@
+$primaryColour: #FF3322;
+$accentColour: #9E9E9E;
+$textColour: black;
+$bodyColour: white;
+
+$primaryColourOffset: white;
+$accentColourOffset: white;
+
+$darkPrimary: darken($primaryColour, 20%);
+$darkPrimaryContrast: invert(saturate($darkPrimary, 50%));
+$darkPrimaryOffset: grayscale($darkPrimaryContrast);
+$primaryColourContrast: contrast-color($primaryColour);
+$lightPrimary: lighten($primaryColour, 30%);
+$lightPrimaryContrast: invert(saturate($lightPrimary, 50%));
+$lightPrimaryOffset: grayscale($lightPrimaryContrast);
+
+%primaryColour {
+    background-color: $primaryColour;
+    color: $primaryColourOffset;
+    border-color: $primaryColour;
+}
+
+%darkPrimary {
+    background-color: $darkPrimary;
+    color: $darkPrimaryOffset;
+    border-color: $darkPrimary;
+}
+
+%lightPrimary {
+    background-color: $lightPrimary;
+    color: $lightPrimaryOffset;
+    border-color: $lightPrimary;
+}

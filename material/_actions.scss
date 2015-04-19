@@ -1,0 +1,112 @@
+%cta {
+    @extend %reset;
+    @extend %buttonFont;
+    background: transparent;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1em;
+    margin: 0 0.6em 0.42em 0;
+    padding: 0.8em 0.6em;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+%action {
+    @extend %cta;
+    width: 1.4em;
+    border-radius: 50%;
+    box-shadow: 0 0 0.1em rgba( 0,0,0 ,0.35 );
+}
+
+%raisedAction {
+    background-color: $accentColour;
+    color: $accentColourOffset;
+}
+
+%raisedAlt {
+    @extend %raisedAction;
+    background-color: $primaryColour;
+    color: $primaryColourOffset;
+}
+
+%ctaAlt {
+    @extend %cta;
+    color: $primaryColour;
+}
+
+%ctaRaisedAlt {
+    @extend %cta;
+    @extend %raisedAlt;
+}
+
+%actionAlt {
+    @extend %action;
+    color: red;
+}
+
+%actionRaisedAlt {
+    @extend %action;
+    @extend %raisedAlt;
+}
+
+%declined {
+    box-shadow: inset 0 0 0.1em rgba( 0,0,0 ,0.35 ),
+                inset 0.05em 0.1em 0.1em rgba( 0,0,0 ,0.35 );
+}
+
+%ctaIcon {
+    height: 1em;
+    width: 1.4em;
+    overflow: hidden;
+    text-align: center;
+    &::before {
+        display: inline-block;
+        width: 100%;
+        margin: 0 1em 1em 0;
+        font-family: '42tiles';
+        font-weight: 300;
+    }
+}
+
+%ctaReload {
+    @extend %ctaIcon;
+    &::before {
+        content: "\e802";
+    }
+}
+
+%ctaGame {
+    @extend %ctaIcon;
+    &::before {
+        content: "\e900";
+    }
+}
+
+%ctaStats {
+    @extend %ctaIcon;
+    &::before {
+        content: "\e901";
+    }
+}
+
+%ctaAchievements {
+    @extend %ctaIcon;
+    &::before {
+        content: "\e902";
+    }
+}
+
+%ctaSettings {
+    @extend %ctaIcon;
+    &::before {
+        content: "\e903";
+    }
+}
+
+%ctaLicense {
+    @extend %ctaIcon;
+    &::before {
+        content: "`";
+    }
+}

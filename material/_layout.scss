@@ -1,0 +1,81 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: qs42reg;
+    margin: 0;
+    padding: 0;
+}
+
+menu {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0.42em 0 0 0.6em;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+}
+
+body > menu,
+.body > menu {
+    @extend %primaryColour;
+    @extend %declinedRight;
+    float: left;
+}
+
+menu > li {
+    list-style: none;
+}
+
+menu > li > a {
+    @extend %cta;
+}
+
+article {
+    box-sizing: border-box;
+    overflow: auto; //articles are meant to be full-screen
+    overflow-x: hidden;
+    position: absolute; //Allow children to be positioned relative too
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 3.8em;
+}
+
+nav {
+    @extend %raised;
+    background-color: $bodyColour;
+    margin: 2em;
+    padding: 0.6em;
+    position: absolute;
+    display: none;
+    z-index: 20;
+}
+
+nav.show {
+    display: block;
+}
+
+nav.show ~ em {
+    margin-top: -100em;
+    margin-left: -100em;
+    padding-top: 100em;
+    padding-left: 100em;
+    background-color: rgba( 0,0,0 ,0.4 );
+    z-index: 19;
+    text-shadow: 1px  1px rgba( 255,255,255 ,0.1),
+                -1px -1px rgba( 255,255,255 ,0.1);
+}
+
+nav > menu {
+    margin: 0 -0.6em -0.6em;
+    text-align: right;
+}
+nav > menu > li {
+    display: inline-block;
+}
+nav > menu > :last-child > a {
+    @extend %ctaAlt;
+}
