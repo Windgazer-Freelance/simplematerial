@@ -10,4 +10,40 @@ I do try to adhere to the basic relative white-spacing / font-sizes that are in 
 as I can. In the end this is simply an attempt at making a quick-start styling framework
 for my own html5 based projects.
 
+## Requirements
+
+Minimum requirements to use are essentially a way to install these files as a dependency
+and some form of SASS :). For some detailed tips and tricks, check under the hood in my
+`Gruntfile.js`.
+
+- [SASS][2]
+- [Sass-tricks][3] (Will be tag along as bower dependency, should you make use of bower)
+
+## Development
+
+If you want to hack on this code directly, make sure you have installed:
+
+- [SASS][2]
+- [NPM][4]
+- [Styledocco][5]
+
+Then run:
+
+```cli
+npm install
+```
+
+For live-reload development making full use of the styledocco docs, combined with the
+`examples.scss` file, run:
+
+```cli
+grunt host
+```
+
+and open 'http://localhost:8282/'
+
 [1]: http://www.google.com/design/spec/material-design/introduction.html
+[2]: http://sass-lang.com/
+[3]: https://github.com/Windgazer-Freelance/sasstricks
+[4]: https://www.npmjs.com/
+[5]: https://github.com/jacobrask/styledocco

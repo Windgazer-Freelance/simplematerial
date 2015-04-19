@@ -2,7 +2,9 @@
 Just a file for implementing the required styles for the examples.
 */
 @import "sasstricks/utils";
+@import "material";
+
 
 body {
-    @extend %clearFloat;
+    @extend %reset;
 }

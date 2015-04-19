@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                         expand: true, flatten: false,
                         src: [
                             "bower.json",
-                            "**/*.scss",
+                            "**/_*.scss",
                             "!libs/**/*.scss"
                         ],
                         dest: "target/release.git/"
@@ -169,6 +169,27 @@ module.exports = function(grunt) {
                 }
             }
         },
+        "http-server": {
+            dev: {
+                // the server root directory
+                root: "target/pages.git/",
+                // the server port
+                // can also be written as a function, e.g.
+                // port: function() { return 8282; }
+                port: 8282,
+                // the host ip address
+                // If specified to, for example, "127.0.0.1" the server will
+                // only be available on that ip.
+                // Specify "0.0.0.0" to be available everywhere
+                host: "0.0.0.0",
+                showDir: true,
+                autoIndex: true,
+                // server default file extension
+                ext: "html",
+                // run in parallel with other tasks
+                runInBackground: true
+            }
+        },
         mkdir: {
             target: {
                 options: {
@@ -189,7 +210,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     flatten: true,
-                    src: ["*.scss"],
+                    src: ["*.scss","!_*.scss"],
                     dest: "target/release",
                     ext: ".css"
                 }]
@@ -203,7 +224,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     flatten: true,
-                    src: ["*.scss"],
+                    src: ["*.scss","!_*.scss"],
                     dest: "target/release",
                     ext: ".css"
                 }]
@@ -213,19 +234,75 @@ module.exports = function(grunt) {
             sass: {
                 // We watch and compile sass files as normal but don"t live reload here
                 files: ["*.scss","**/*.scss"],
-                tasks: ["sass:dev"]
+                tasks: ["render"]
             },
             livereload: {
                 // Here we watch the files the sass task will compile to
                 // These files are sent to the live reload server after sass compiles to them
-                options: { livereload: true },
-                files: ["style/compiled/*","code/*","*.html"]
+                options: {
+                    livereload: true,
+                    cwd: "target/pages.git/"
+                },
+                files: ["*.css","*.html"]
             }
         }
     });
 
     // Default task(s).
-    grunt.registerTask("default", ["clean:release","mkdir","sass:dev"]);
-    grunt.registerTask("init", ["clean:release","mkdir:target"]);
+    grunt.registerTask(
+        "default",
+        [
+            "prep",
+            "render"
+        ]
+    );
+    grunt.registerTask( //Cleaning, cloning, mkdir, that sorta stuff
+        "prep",
+        [
+            "clean:release",
+            "mkdir",
+            "gitclone:ghpages"
+        ]
+    );
+    grunt.registerTask( //Copying, parsing, compiling, you know the drill
+        "render",
+        [
+            "copy:release",
+            "sass:dev",
+            "sd"
+        ]
+    );
+    grunt.registerTask( //Running servers, file-watching, the whole sh'bang
+        "host",
+        [
+            "default",
+            "http-server:dev",
+            "watch"
+        ]
+    );
+
+    grunt.registerTask("sd", function(which) { //couldn't get grunt-styledocco to pick up includes
+        // Instruct this task to wait until we call the done() method to continue
+        var done = this.async();
+
+        // Run `git rev-parse HEAD` to get the SHA
+        grunt.util.spawn({
+            opts: {
+                cwd: "target/release.git/"
+            },
+            cmd: "styledocco",
+            args: [
+                "--verbose",
+                "-n", grunt.config.get("pkg.info.fullName"),
+                "-o", "../pages.git/",
+                "--include", "../release/examples.css"
+            ]
+        }, function(err, out, stderr) {
+            // TODO: Handle error
+
+            // All done, continue to the next tasks
+            done();
+        });
+    });
 
 };
