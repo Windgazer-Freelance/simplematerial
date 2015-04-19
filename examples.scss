@@ -1,0 +1,8 @@
+/*
+Just a file for implementing the required styles for the examples.
+*/
+@import "sasstricks/utils";
+
+body {
+    @extend %clearFloat;
+}

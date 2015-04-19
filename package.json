@@ -1,0 +1,44 @@
+{
+  "name": "SimpleMaterial",
+  "info": {
+    "fullName": "Simple Material Design",
+    "safeName": "SimpleMaterial",
+    "description": "A simplistic SASS implementation of Material Design.",
+    "id": "na"
+  },
+  "author": {
+    "name": "Martin 'Windgazer' Reurings",
+    "email": "martin@windgazer.nl",
+    "url": "http://www.windgazer.nl/"
+  },
+  "version": "0.0.1",
+  "build": {
+    "target": "target/release.git"
+  },
+  "wiki": {
+    "target": "target/wiki.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.1",
+    "grunt-bumpup": "^0.6.2",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-sass": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-git": "^0.3.4",
+    "grunt-mkdir": "^0.1.2",
+    "grunt-usemin": "^3.0.0",
+    "matchdep": "~0.1.2"
+  },
+  "engine": "node 0.8.12",
+  "scripts": {
+    "install": "bower install;grunt",
+    "release": "grunt release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Windgazer-Freelance/simplematerial.git"
+  }
+}
