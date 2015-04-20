@@ -20,19 +20,19 @@
 }
 
 %raisedAction {
-    background-color: $accentColour;
-    color: $accentColourOffset;
+    background-color: $mt-accentColour;
+    color: $mt-accentColourOffset;
 }
 
 %raisedAlt {
     @extend %raisedAction;
-    background-color: $primaryColour;
-    color: $primaryColourOffset;
+    background-color: $mt-primaryColour;
+    color: $mt-primaryColourOffset;
 }
 
 %ctaAlt {
     @extend %cta;
-    color: $primaryColour;
+    color: $mt-primaryColour;
 }
 
 %ctaRaisedAlt {

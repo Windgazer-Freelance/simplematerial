@@ -20,7 +20,7 @@ menu {
 
 body > menu,
 .body > menu {
-    @extend %primaryColour;
+    @extend %mt-primaryColour;
     @extend %declinedRight;
     float: left;
 }
@@ -46,7 +46,7 @@ article {
 
 nav {
     @extend %raised;
-    background-color: $bodyColour;
+    background-color: $mt-bodyColour;
     margin: 2em;
     padding: 0.6em;
     position: absolute;

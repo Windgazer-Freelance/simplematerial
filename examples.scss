@@ -63,3 +63,15 @@ body {
 .mt-button {
     @extend %mt-button;
 }
+
+.mt-primaryColour {
+    @extend %mt-primaryColour;
+}
+
+.mt-darkPrimaryColour {
+    @extend %mt-darkPrimaryColour;
+}
+
+.mt-lightPrimaryColour {
+    @extend %mt-lightPrimaryColour;
+}

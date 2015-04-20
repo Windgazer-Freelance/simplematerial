@@ -1,33 +1,54 @@
-$primaryColour: #FF3322;
-$accentColour: #9E9E9E;
-$textColour: black;
-$bodyColour: white;
+$mt-primaryColour: #FF3322 !default;
+$mt-accentColour: #9E9E9E !default;
+$mt-textColour: black !default;
+$mt-bodyColour: white !default;
 
-$primaryColourOffset: white;
-$accentColourOffset: white;
+$mt-primaryColourOffset: white !default;
+$mt-accentColourOffset: white !default;
 
-$darkPrimary: darken($primaryColour, 20%);
-$darkPrimaryContrast: invert(saturate($darkPrimary, 50%));
-$darkPrimaryOffset: grayscale($darkPrimaryContrast);
-$primaryColourContrast: contrast-color($primaryColour);
-$lightPrimary: lighten($primaryColour, 30%);
-$lightPrimaryContrast: invert(saturate($lightPrimary, 50%));
-$lightPrimaryOffset: grayscale($lightPrimaryContrast);
+$mt-darkPrimary: darken($mt-primaryColour, 20%) !default;
+$mt-darkPrimaryContrast: invert(saturate($mt-darkPrimary, 50%)) !default;
+$mt-darkPrimaryOffset: grayscale($mt-darkPrimaryContrast) !default;
+$mt-primaryColourContrast: contrast-color($mt-primaryColour) !default;
+$mt-lightPrimary: lighten($mt-primaryColour, 30%) !default;
+$mt-lightPrimaryContrast: invert(saturate($mt-lightPrimary, 50%)) !default;
+$mt-lightPrimaryOffset: grayscale($mt-lightPrimaryContrast) !default;
 
-%primaryColour {
-    background-color: $primaryColour;
-    color: $primaryColourOffset;
-    border-color: $primaryColour;
+/*
+# Primary color
+
+```
+<div class="mt-primaryColour">Primary colour-scheme</div>
+```
+*/
+%mt-primaryColour {
+    background-color: $mt-primaryColour;
+    color: $mt-primaryColourOffset;
+    border-color: $mt-primaryColour;
 }
 
-%darkPrimary {
-    background-color: $darkPrimary;
-    color: $darkPrimaryOffset;
-    border-color: $darkPrimary;
+/*
+# Dark Primary color
+
+```
+<div class="mt-darkPrimaryColour">Dark Primary colour-scheme</div>
+```
+*/
+%mt-darkPrimaryColour {
+    background-color: $mt-darkPrimary;
+    color: $mt-darkPrimaryOffset;
+    border-color: $mt-darkPrimary;
 }
 
-%lightPrimary {
-    background-color: $lightPrimary;
-    color: $lightPrimaryOffset;
-    border-color: $lightPrimary;
+/*
+# Light Primary color
+
+```
+<div class="mt-lightPrimaryColour">Light Primary colour-scheme</div>
+```
+*/
+%mt-lightPrimaryColour {
+    background-color: $mt-lightPrimary;
+    color: $mt-lightPrimaryOffset;
+    border-color: $mt-lightPrimary;
 }
