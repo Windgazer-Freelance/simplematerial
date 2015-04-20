@@ -1,59 +1,138 @@
-%cta {
+/*
+# Buttons and other actions
+
+The following partial mimics to some degree of accuracy the Google Material Design specs
+on [buttons](http://www.google.com/design/spec/components/buttons.html#buttons-usage).
+
+A somewhat 'leading' name for anything that might need to look like a button, but might
+well be just a hyperlink.
+*/
+
+/*
+# Flat Button
+
+```
+<a class="mt-flatButton" href="#">Call to Action</a>
+```
+*/
+%mt-flatButton {
     @extend %reset;
     @extend %mt-button;
-    background: transparent;
     cursor: pointer;
     display: inline-block;
-    line-height: 1em;
+    line-height: 1;
     margin: 0 0.6em 0.42em 0;
     padding: 0.8em 0.6em;
-    text-decoration: none;
     text-transform: uppercase;
     text-align: center;
 }
 
-%action {
-    @extend %cta;
+/*
+# Floating Action
+```
+<a class="mt-floatingAction" href="#">+</a>
+```
+*/
+%mt-floatingAction {
+    @extend %mt-flatButton;
     width: 1.4em;
     border-radius: 50%;
-    box-shadow: 0 0 0.1em rgba( 0,0,0 ,0.35 );
+    box-shadow: 0 0 0.1em rgba( 0,0,0 ,0.35 ),
+                0 0.3em 0.2em rgba( 0,0,0 ,0.15 );
 }
 
-%raisedAction {
-    @extend %mt-A400;
+/*
+# Raised Button
+
+```
+<a class="mt-raisedButton" href="#">Call to Action</a>
+```
+*/
+%mt-raisedButton {
+    @extend %mt-flatButton;
+    border-radius: 0.15em;
+    box-shadow: -0.05em 0.05em 0.1em rgba( 0,0,0 ,0.35 );
 }
 
-%raisedAlt {
-    @extend %raisedAction;
+/*
+# Floating Action Primary Colour
+```
+<a class="mt-floatingActionP500" href="#">+</a>
+```
+*/
+%mt-floatingActionP500 {
+    @extend %mt-floatingAction;
     @extend %mt-P500;
 }
 
-%ctaAlt {
-    @extend %cta;
+/*
+# Floating Action Alternate Colour
+```
+<a class="mt-floatingActionA400" href="#">+</a>
+```
+*/
+%mt-floatingActionA400 {
+    @extend %mt-floatingAction;
+    @extend %mt-A400;
+}
+
+/*
+# Flat Button Primary Colour
+
+```
+<a class="mt-flatButtonP500" href="#">Call to Action</a>
+```
+*/
+%mt-flatButtonP500 {
+    @extend %mt-flatButton;
     color: $mt-c-P500;
 }
 
-%ctaRaisedAlt {
-    @extend %cta;
-    @extend %raisedAlt;
+/*
+# Flat Button Alternate Colour
+
+```
+<a class="mt-flatButtonA400" href="#">Call to Action</a>
+```
+*/
+%mt-flatButtonA400 {
+    @extend %mt-flatButton;
+    color: $mt-c-A400;
 }
 
-%actionAlt {
-    @extend %action;
-    color: red;
+/*
+# Raised Button Primary Colour
+
+```
+<a class="mt-raisedButtonP500" href="#">Call to Action</a>
+```
+*/
+%mt-raisedButtonP500 {
+    @extend %mt-raisedButton;
+    @extend %mt-P500;
 }
 
-%actionRaisedAlt {
-    @extend %action;
-    @extend %raisedAlt;
+/*
+# Raised Button Alternate Colour
+
+```
+<a class="mt-raisedButtonA400" href="#">Call to Action</a>
+```
+*/
+%mt-raisedButtonA400 {
+    @extend %mt-raisedButton;
+    @extend %mt-A400;
 }
 
+/*
+#TODO
+*/
 %declined {
     box-shadow: inset 0 0 0.1em rgba( 0,0,0 ,0.35 ),
                 inset 0.05em 0.1em 0.1em rgba( 0,0,0 ,0.35 );
 }
 
-%ctaIcon {
+%mt-flatButtonIcon {
     height: 1em;
     width: 1.4em;
     overflow: hidden;
@@ -67,43 +146,43 @@
     }
 }
 
-%ctaReload {
-    @extend %ctaIcon;
+%mt-flatButtonReload {
+    @extend %mt-flatButtonIcon;
     &::before {
         content: "\e802";
     }
 }
 
-%ctaGame {
-    @extend %ctaIcon;
+%mt-flatButtonGame {
+    @extend %mt-flatButtonIcon;
     &::before {
         content: "\e900";
     }
 }
 
-%ctaStats {
-    @extend %ctaIcon;
+%mt-flatButtonStats {
+    @extend %mt-flatButtonIcon;
     &::before {
         content: "\e901";
     }
 }
 
-%ctaAchievements {
-    @extend %ctaIcon;
+%mt-flatButtonAchievements {
+    @extend %mt-flatButtonIcon;
     &::before {
         content: "\e902";
     }
 }
 
-%ctaSettings {
-    @extend %ctaIcon;
+%mt-flatButtonSettings {
+    @extend %mt-flatButtonIcon;
     &::before {
         content: "\e903";
     }
 }
 
-%ctaLicense {
-    @extend %ctaIcon;
+%mt-flatButtonLicense {
+    @extend %mt-flatButtonIcon;
     &::before {
         content: "`";
     }

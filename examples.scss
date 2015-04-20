@@ -18,6 +18,7 @@ Just a file for implementing the required styles for the examples.
 
 body {
     font-size: 12px;
+    padding: 0.5em;
 }
 
 .mt-display4 {
@@ -120,4 +121,40 @@ h1.mt-A400 {
 
 .mt-A100 {
     @extend %mt-A100;
+}
+
+.mt-flatButton {
+    @extend %mt-flatButton;
+}
+
+.mt-floatingAction {
+    @extend %mt-floatingAction;
+}
+
+.mt-raisedButton {
+    @extend %mt-raisedButton;
+}
+
+.mt-floatingActionP500 {
+    @extend %mt-floatingActionP500;
+}
+
+.mt-floatingActionA400 {
+    @extend %mt-floatingActionA400;
+}
+
+.mt-flatButtonP500 {
+    @extend %mt-flatButtonP500;
+}
+
+.mt-flatButtonA400 {
+    @extend %mt-flatButtonA400;
+}
+
+.mt-raisedButtonP500 {
+    @extend %mt-raisedButtonP500;
+}
+
+.mt-raisedButtonA400 {
+    @extend %mt-raisedButtonA400;
 }

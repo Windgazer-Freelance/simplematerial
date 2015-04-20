@@ -30,7 +30,7 @@ menu > li {
 }
 
 menu > li > a {
-    @extend %cta;
+    @extend %mt-flatButton;
 }
 
 article {
@@ -77,5 +77,5 @@ nav > menu > li {
     display: inline-block;
 }
 nav > menu > :last-child > a {
-    @extend %ctaAlt;
+    @extend %mt-flatButtonP500;
 }
