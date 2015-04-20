@@ -64,14 +64,60 @@ body {
     @extend %mt-button;
 }
 
-.mt-primaryColour {
-    @extend %mt-primaryColour;
+h1.mt-P500,
+h1.mt-A400 {
+    @extend %headerFont !optional;
+    margin-bottom: 0;
+    padding: 1em;
 }
 
-.mt-darkPrimaryColour {
-    @extend %mt-darkPrimaryColour;
+.mt-P500 + dl,
+.mt-A400 + dl {
+    @extend %headerFont !optional;
+    margin: 0;
 }
 
-.mt-lightPrimaryColour {
-    @extend %mt-lightPrimaryColour;
+.mt-P500 + dl > dt,
+.mt-A400 + dl > dt {
+    float: left;
+    padding: 1em;
+}
+
+.mt-P500 + dl > dd,
+.mt-A400 + dl > dd {
+    margin: 0;
+    text-align: right;
+    padding: 1em;
+}
+
+.mt-P500 {
+    @extend %mt-P500;
+}
+
+.mt-P700 {
+    @extend %mt-P700;
+}
+
+.mt-P100 {
+    @extend %mt-P100;
+}
+
+.mt-P000 {
+    @extend %mt-P000;
+}
+
+.mt-P000 {
+    @extend %mt-P000;
+}
+
+.mt-A400 {
+    @extend %mt-A400;
+}
+
+.mt-A200 {
+    @extend %mt-A200;
+}
+
+.mt-A100 {
+    @extend %mt-A100;
 }

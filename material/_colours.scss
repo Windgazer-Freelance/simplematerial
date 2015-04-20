@@ -1,54 +1,140 @@
-$mt-primaryColour: #FF3322 !default;
-$mt-accentColour: #9E9E9E !default;
-$mt-textColour: black !default;
-$mt-bodyColour: white !default;
-
-$mt-primaryColourOffset: white !default;
-$mt-accentColourOffset: white !default;
-
-$mt-darkPrimary: darken($mt-primaryColour, 20%) !default;
-$mt-darkPrimaryContrast: invert(saturate($mt-darkPrimary, 50%)) !default;
-$mt-darkPrimaryOffset: grayscale($mt-darkPrimaryContrast) !default;
-$mt-primaryColourContrast: contrast-color($mt-primaryColour) !default;
-$mt-lightPrimary: lighten($mt-primaryColour, 30%) !default;
-$mt-lightPrimaryContrast: invert(saturate($mt-lightPrimary, 50%)) !default;
-$mt-lightPrimaryOffset: grayscale($mt-lightPrimaryContrast) !default;
-
 /*
-# Primary color
+# Colours
+
+These are a basic colour setup based on the google Material Design
+[colour specification](http://www.google.com/design/spec/style/color.html#color-ui-color-application).
+
+Any of the colours defined here are simply defaults and can be overwritten by defining
+them before importing the `_colours.scss` file.
 
 ```
-<div class="mt-primaryColour">Primary colour-scheme</div>
+<h1 class="mt-P500">Primary</h1>
+<dl>
+    <dt class="mt-P100">100</dt>
+    <dd class="mt-P100">#F44336</dd>
+    <dt class="mt-P500">500</dt>
+    <dd class="mt-P500">#F44336</dd>
+    <dt class="mt-P700">700</dt>
+    <dd class="mt-P700">#F44336</dd>
+</dl>
+<h1 class="mt-A400">Accent</h1>
+<dl>
+    <dt class="mt-A100">100</dt>
+    <dd class="mt-A100">#F44336</dd>
+    <dt class="mt-A200">500</dt>
+    <dd class="mt-A200">#F44336</dd>
+    <dt class="mt-A400">700</dt>
+    <dd class="mt-A400">#F44336</dd>
+</dl>
 ```
 */
-%mt-primaryColour {
-    background-color: $mt-primaryColour;
-    color: $mt-primaryColourOffset;
-    border-color: $mt-primaryColour;
+$mt-c-P700: #D32F2F !default;
+$mt-c-P500: #F44336 !default;
+$mt-c-P100: #FFCDD2 !default;
+$mt-c-P000: #FFFFFF !default;
+$mt-cp: $mt-c-P000 $mt-c-P100 $mt-c-P500 $mt-c-P700;
+
+$mt-c-A400: #BDBDBD !default;
+$mt-c-A200: #EEEEEE !default;
+$mt-c-A100: #F5F5F5 !default;
+$mt-ca: $mt-c-A100 $mt-c-A200 $mt-c-A400;
+
+$mt-ct-P700: white !default;
+$mt-ct-P500: $mt-ct-P700 !default;
+$mt-ct-P100: #000000 !default;
+$mt-ct-p000: #000000 !default;
+$mt-ctp: $mt-ct-p000 $mt-ct-P100 $mt-ct-P500 $mt-ct-P700;
+
+$mt-ct-A400: white !default;
+$mt-ct-A200: $mt-ct-A400 !default;
+$mt-ct-A100: $mt-ct-A200 !default;
+$mt-cta: $mt-ct-A100 $mt-ct-A200 $mt-ct-A400;
+
+
+@mixin setPColors($n) {
+    background-color: nth($mt-cp, $n);
+    color: nth($mt-ctp, $n);
+    border-color: nth($mt-cp, $n);
+}
+@mixin setAColors($n) {
+    background-color: nth($mt-ca, $n);
+    color: nth($mt-ctp, $n);
+    border-color: nth($mt-ca, $n);
 }
 
 /*
-# Dark Primary color
+# Primary colour
 
 ```
-<div class="mt-darkPrimaryColour">Dark Primary colour-scheme</div>
+<div class="mt-P500">Primary colour-scheme</div>
 ```
 */
-%mt-darkPrimaryColour {
-    background-color: $mt-darkPrimary;
-    color: $mt-darkPrimaryOffset;
-    border-color: $mt-darkPrimary;
+%mt-P500 {
+    @include setPColors(3);
 }
 
 /*
-# Light Primary color
+# Dark Primary colour
 
 ```
-<div class="mt-lightPrimaryColour">Light Primary colour-scheme</div>
+<div class="mt-P700">Dark Primary colour-scheme</div>
 ```
 */
-%mt-lightPrimaryColour {
-    background-color: $mt-lightPrimary;
-    color: $mt-lightPrimaryOffset;
-    border-color: $mt-lightPrimary;
+%mt-P700 {
+    @include setPColors(4);
+}
+
+/*
+# Light Primary colour
+
+```
+<div class="mt-P100">Light Primary colour-scheme</div>
+```
+*/
+%mt-P100 {
+    @include setPColors(2);
+}
+
+/*
+# Primary Body colours
+
+```
+<div class="mt-P000">Primary Body colour-scheme</div>
+```
+*/
+%mt-P000 {
+    @include setPColors(1);
+}
+
+/*
+# Accent Colour
+
+```
+<div class="mt-A200">Accent Colour-scheme</div>
+```
+*/
+%mt-A200 {
+    @include setAColors(2);
+}
+
+/*
+# Dark Accent Colour
+
+```
+<div class="mt-A400">Dark Accent Colour-scheme</div>
+```
+*/
+%mt-A400 {
+    @include setAColors(3);
+}
+
+/*
+# Light Accent Colour
+
+```
+<div class="mt-A100">Light Accent Colour-scheme</div>
+```
+*/
+%mt-A100 {
+    @include setAColors(1);
 }
