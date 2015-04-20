@@ -1,32 +1,167 @@
-/**
- * Typography based on:
- * http://www.google.com/design/spec/style/typography.html#typography-standard-styles
- */
-h1, h2, h3, h4 {
+/*
+ # Typography
+ By assuming a base font of 15sp and calculating all other typography relative to this
+ base font, this file contains the same list as the
+ [typography section](http://www.google.com/design/spec/style/typography.html#typography-standard-styles)
+ on the google specs.
+
+```
+<h1 class="mt-display4">Light 112sp</h1>
+<h1 class="mt-display3">Regular 56sp</h1>
+<h1 class="mt-display2">Regular 56sp</h1>
+<h1 class="mt-display1">Regular 56sp</h1>
+<h1 class="mt-headline">Regular 24sp</h1>
+<h1 class="mt-title">Medium 21sp</h1>
+<h1 class="mt-subhead">Regular 17sp</h1>
+<h1 class="mt-body2">Medium 15sp</h1>
+<h1 class="mt-body1">Regular 15sp</h1>
+<div class="mt-caption">Regular 13sp</div>
+<div><a href="#" class="mt-button">Medium 15sp</a></div>
+```
+
+*/
+%mt-headers {
     @extend %reset;
     &:first-child {
         margin-top: 0;
     }
+    @extend %headerFont !optional;
 }
 
-h1, h4 { //Title, h4 is for dialogs
-    font-size: 1.42em;
-    font-weight: 600;
+/*
+# Display 4
+
+```
+<h1 class="mt-display4">Light 112sp</h1>
+```
+*/
+%mt-display4 {
+    @extend %mt-headers;
+    font-size: (round(112 / 0.15) / 100) * 1em;
+    font-weight: 300;
 }
 
-h2 { //Headline
-    font-size: 1.71em;
+/*
+# Display 3
+
+```
+<h1 class="mt-display3">Regular 56sp</h1>
+```
+*/
+%mt-display3 {
+    @extend %mt-headers;
+    font-size: (round(56 / 0.15) / 100) * 1em;
 }
 
-h3 { //Subhead
-    font-size: 1.14em;
+/*
+# Display 2
+
+```
+<h1 class="mt-display2">Regular 45sp</h1>
+```
+*/
+%mt-display2 {
+    @extend %mt-headers;
+    font-size: (round(45 / 0.15) / 100) * 1em;
 }
 
-%buttonFont {
-    font-weight: 600;
+/*
+# Display 1
+
+```
+<h1 class="mt-display1">Regular 34sp</h1>
+```
+*/
+%mt-display1 {
+    @extend %mt-headers;
+    font-size: (round(34 / 0.15) / 100) * 1em;
 }
 
-a {
+/*
+#Headline
+```
+<h1 class="mt-headline">Regular 24sp</h1>
+```
+*/
+%mt-headline {
+    @extend %mt-headers;
+    font-size: (round(24 / 0.15) / 100) * 1em;
+}
+
+/*
+# Title
+
+```
+<h1 class="mt-title">Medium 21sp</h1>
+```
+*/
+%mt-title {
+    @extend %mt-headers;
+    font-size: (round(21 / 0.15) / 100) * 1em;
+    font-weight: 500;
+}
+
+/*
+# Subhead
+
+```
+<h1 class="mt-subhead">Regular 17sp</h1>
+```
+*/
+%mt-subhead {
+    @extend %mt-headers;
+    font-size: (round(17 / 0.15) / 100) * 1em;
+}
+
+/*
+# Body 2
+
+```
+<h1 class="mt-body2">Medium 15sp</h1>
+```
+*/
+%mt-body2 {
+    @extend %mt-headers;
+    font-size: (round(15 / 0.15) / 100) * 1em;
+    font-weight: 500;
+}
+
+/*
+# Body 1
+
+```
+<h1 class="mt-body1">Regular 15sp</h1>
+```
+*/
+%mt-body1 {
+    @extend %mt-headers;
+    font-size: (round(15 / 0.15) / 100) * 1em;
+}
+
+/*
+# Caption
+
+```
+<div class="mt-caption">Regular 13sp</div>
+```
+*/
+%mt-caption {
+    @extend %mt-headers;
+    font-size: (round(13 / 0.15) / 100) * 1em;
+}
+
+/*
+# Button
+
+```
+<a href="#" class="mt-button">Medium 15sp</a>
+```
+*/
+%mt-button {
+    @extend %reset;
+    @extend %buttonFont !optional;
+    font-size: (round(15 / 0.15) / 100) * 1em;
+    font-weight: 500;
     color: inherit;
     text-decoration: none;
 }

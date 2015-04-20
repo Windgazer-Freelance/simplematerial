@@ -2,9 +2,64 @@
 Just a file for implementing the required styles for the examples.
 */
 @import "sasstricks/utils";
+
+%headerFont {
+    font-family: 'Roboto', sans-serif;
+    @at-root {
+        @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+    }
+}
+
+%buttonFont {
+    @extend %headerFont;
+}
+
 @import "material";
 
-
 body {
-    @extend %reset;
+    font-size: 12px;
+}
+
+.mt-display4 {
+    @extend %mt-display4;
+}
+
+.mt-display3 {
+    @extend %mt-display3;
+}
+
+.mt-display2 {
+    @extend %mt-display2;
+}
+
+.mt-display1 {
+    @extend %mt-display1;
+}
+
+.mt-headline {
+    @extend %mt-headline;
+}
+
+.mt-title {
+    @extend %mt-title;
+}
+
+.mt-subhead {
+    @extend %mt-subhead;
+}
+
+.mt-body2 {
+    @extend %mt-subhead;
+}
+
+.mt-body1 {
+    @extend %mt-subhead;
+}
+
+.mt-caption {
+    @extend %mt-caption;
+}
+
+.mt-button {
+    @extend %mt-button;
 }

@@ -234,7 +234,7 @@ module.exports = function(grunt) {
             sass: {
                 // We watch and compile sass files as normal but don"t live reload here
                 files: ["*.scss","**/*.scss"],
-                tasks: ["render"]
+                tasks: ["default"]
             },
             livereload: {
                 // Here we watch the files the sass task will compile to
