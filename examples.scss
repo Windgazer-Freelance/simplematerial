@@ -158,3 +158,61 @@ h1.mt-A400 {
 .mt-raisedButtonA400 {
     @extend %mt-raisedButtonA400;
 }
+
+%mt-regionContainer {
+    & article {
+        padding: 1em;
+        height: 5em;
+    }
+    & :first-child {
+
+    }
+    & :last-child {
+        background-color: $mt-c-A100;
+    }
+}
+%mt-regionContainerSideBySide {
+    @extend %mt-regionContainer;
+    & article {
+        float: left;
+        box-sizing: border-box;
+        width: 50%;
+    }
+}
+
+.mt-regionContainerBottomShadow {
+    @extend %mt-regionContainer;
+    & :first-child {
+        @extend %mt-s-raisedBottom;
+    }
+    & :last-child {
+        background-color: transparent;
+    }
+}
+.mt-regionContainerTopShadow {
+    @extend %mt-regionContainer;
+    & :last-child {
+        @extend %mt-s-declinedTop;
+    }
+}
+.mt-regionContainerRightShadow {
+    @extend %mt-regionContainerSideBySide;
+    & :first-child {
+        @extend %mt-s-raisedRight;
+    }
+    & :last-child {
+        background-color: transparent;
+    }
+}
+.mt-regionContainerLeftShadow {
+    @extend %mt-regionContainerSideBySide;
+    & :last-child {
+        @extend %mt-s-declinedLeft;
+    }
+}
+.mt-regionContainerPaperFiber {
+    @extend .mt-regionContainerTopShadow;
+    & :last-child {
+        @extend %mt-paperFibers;
+    }
+}
