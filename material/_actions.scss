@@ -152,6 +152,12 @@ well be just a hyperlink.
     }
 }
 
+/*
+# Predefined icons
+
+In the near future I would like to implement a set of predefined icons based on the set of
+[materials design icons on github](https://github.com/google/material-design-icons).
+*/
 %mt-flatButtonGame {
     @extend %mt-flatButtonIcon;
     &::before {
