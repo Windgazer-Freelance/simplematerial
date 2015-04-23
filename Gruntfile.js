@@ -46,6 +46,16 @@ module.exports = function(grunt) {
                     src: ["."]
                 }
             },
+            ghpages: {
+                options: {
+                    all: true,
+                    cwd: "target/pages.git/",
+                    force: false
+                },
+                files: {
+                    src: ["."]
+                }
+            },
             source: {
                 options: {
                     all: true,
@@ -97,7 +107,7 @@ module.exports = function(grunt) {
             ghpages: {
                 options: {
                     cwd: "target/pages.git/",
-                    message: "Releasing v<%= pkg.version %> build <%= buildVersion %>",
+                    message: "Releasing v<%= pkg.version %>-src build <%= buildVersion %>",
                     allowEmpty: true //In case of no changes since last dev build...
                 },
                 files: {
@@ -159,6 +169,7 @@ module.exports = function(grunt) {
             },
             ghpages: {
                 options: {
+                    cwd: "target/pages.git/",
                     tag: "v<%= pkg.version %>-docs"
                 }
             },
@@ -261,6 +272,7 @@ module.exports = function(grunt) {
         [
             "clean:release",
             "mkdir",
+            "gitclone:release",
             "gitclone:ghpages"
         ]
     );
@@ -304,5 +316,61 @@ module.exports = function(grunt) {
             done();
         });
     });
+
+    grunt.registerTask("release",
+     "My custom release task, can be run in stages [prep|dev|live], prep must be used " +
+     "before live!\n" +
+     "'dev' will commit and push to release branch without confirmation.\n" +
+     "'prep' will stash anything on current branch and checkout master branch.",
+      function (type) {
+        var isDev = type === "dev";
+        if (!isDev) {
+            grunt.task.run("releaseclean");
+        } else {
+            type = "prep";
+        }
+        type = type ? type : "prep"; // Default release type
+        grunt.task.run("release" + type);
+        if (isDev) {
+            grunt.task.run("releasedev");
+        }
+    });
+    grunt.registerTask(
+        "releaselive",
+        [
+            "gittag:source",
+            "gittag:release",
+            "gittag:ghpages",
+            "gitpush:release",
+            "gitpush:ghpages",
+            "bumpup",
+            "gitadd:source",
+            "gitcommit:source"
+        ]
+    );
+    grunt.registerTask(
+        "releasedev",
+        [
+            "gittag:dev",
+            "gitpush:release"
+        ]
+    );
+    grunt.registerTask(
+        "releaseprep",
+        [
+            "default",
+            "gitadd:release",
+            "gitcommit:release",
+            "gitadd:ghpages",
+            "gitcommit:ghpages"
+        ]
+    );
+    grunt.registerTask(
+        "releaseclean",
+        [
+            "gitstash",
+            "gitcheckout"
+        ]
+    );
 
 };
