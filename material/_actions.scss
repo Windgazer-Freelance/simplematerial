@@ -1,0 +1,197 @@
+/*
+# Buttons and other actions
+
+The following partial mimics to some degree of accuracy the Google Material Design specs
+on [buttons](http://www.google.com/design/spec/components/buttons.html#buttons-usage).
+
+A somewhat 'leading' name for anything that might need to look like a button, but might
+well be just a hyperlink.
+*/
+
+/*
+# Flat Button
+
+```
+<a class="mt-flatButton" href="#">Call to Action</a>
+```
+*/
+%mt-flatButton {
+    @extend %reset;
+    @extend %mt-button;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    margin: 0 ($mt-basePadding / 3) ($mt-basePadding / 4) 0;
+    padding: ($mt-basePadding / 2) ($mt-basePadding / 2);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*
+# Floating Action
+```
+<a class="mt-floatingAction" href="#">+</a>
+```
+*/
+%mt-floatingAction {
+    @extend %mt-flatButton;
+    @extend %mt-s-floating;
+    line-height: $mt-basePadding;
+    border-radius: 50%;
+    padding: ($mt-basePadding / 2) ($mt-basePadding / 2);
+    width: $mt-basePadding;
+}
+
+/*
+# Raised Button
+
+```
+<a class="mt-raisedButton" href="#">Call to Action</a>
+```
+*/
+%mt-raisedButton {
+    @extend %mt-flatButton;
+    @extend %mt-s-raised;
+    border-radius: ($mt-basePadding / 8);
+    padding: ($mt-basePadding / 2) ($mt-basePadding);
+}
+
+/*
+# Floating Action Primary Colour
+```
+<a class="mt-floatingActionP500" href="#">+</a>
+```
+*/
+%mt-floatingActionP500 {
+    @extend %mt-floatingAction;
+    @extend %mt-P500;
+}
+
+/*
+# Floating Action Alternate Colour
+```
+<a class="mt-floatingActionA400" href="#">+</a>
+```
+*/
+%mt-floatingActionA400 {
+    @extend %mt-floatingAction;
+    @extend %mt-A400;
+}
+
+/*
+# Flat Button Primary Colour
+
+```
+<a class="mt-flatButtonP500" href="#">Call to Action</a>
+```
+*/
+%mt-flatButtonP500 {
+    @extend %mt-flatButton;
+    color: $mt-c-P500;
+}
+
+/*
+# Flat Button Alternate Colour
+
+```
+<a class="mt-flatButtonA400" href="#">Call to Action</a>
+```
+*/
+%mt-flatButtonA400 {
+    @extend %mt-flatButton;
+    color: $mt-c-A400;
+}
+
+/*
+# Raised Button Primary Colour
+
+```
+<a class="mt-raisedButtonP500" href="#">Call to Action</a>
+```
+*/
+%mt-raisedButtonP500 {
+    @extend %mt-raisedButton;
+    @extend %mt-P500;
+}
+
+/*
+# Raised Button Alternate Colour
+
+```
+<a class="mt-raisedButtonA400" href="#">Call to Action</a>
+```
+*/
+%mt-raisedButtonA400 {
+    @extend %mt-raisedButton;
+    @extend %mt-A400;
+}
+
+/*
+#TODO
+*/
+%declined {
+    box-shadow: inset 0 0 0.1em rgba( 0,0,0 ,0.35 ),
+                inset 0.05em 0.1em 0.1em rgba( 0,0,0 ,0.35 );
+}
+
+%mt-flatButtonIcon {
+    height: 1em;
+    width: 1.4em;
+    overflow: hidden;
+    text-align: center;
+    &::before {
+        display: inline-block;
+        width: 100%;
+        margin: 0 1em 1em 0;
+        font-family: '42tiles';
+        font-weight: 300;
+    }
+}
+
+%mt-flatButtonReload {
+    @extend %mt-flatButtonIcon;
+    &::before {
+        content: "\e802";
+    }
+}
+
+/*
+# Predefined icons
+
+In the near future I would like to implement a set of predefined icons based on the set of
+[materials design icons on github](https://github.com/google/material-design-icons).
+*/
+%mt-flatButtonGame {
+    @extend %mt-flatButtonIcon;
+    &::before {
+        content: "\e900";
+    }
+}
+
+%mt-flatButtonStats {
+    @extend %mt-flatButtonIcon;
+    &::before {
+        content: "\e901";
+    }
+}
+
+%mt-flatButtonAchievements {
+    @extend %mt-flatButtonIcon;
+    &::before {
+        content: "\e902";
+    }
+}
+
+%mt-flatButtonSettings {
+    @extend %mt-flatButtonIcon;
+    &::before {
+        content: "\e903";
+    }
+}
+
+%mt-flatButtonLicense {
+    @extend %mt-flatButtonIcon;
+    &::before {
+        content: "`";
+    }
+}

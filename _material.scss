@@ -1,0 +1,17 @@
+/*
+ #Simple Material Design
+
+ This is a simplistic implementation of Material Design. However, it should allow for a
+ quick and easy implementation of HTML5 apps with an acceptable base design.
+
+ Check out the examples.scss file for a common implementation, check the docs written in
+ the scss files for detailed info on what all the partials do.
+
+ @requires sasstricks/utils
+*/
+
+@import "material/typography";
+@import "material/colours";
+@import "material/paper";
+@import "material/actions";
+@import "material/layout";
