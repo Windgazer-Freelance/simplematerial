@@ -20,12 +20,14 @@
 ```
 
 */
+$mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 %mt-headers {
     @extend %reset;
     &:first-child {
         margin-top: 0;
     }
     @extend %headerFont !optional;
+    margin: 0 0 ((round(24 / 0.15) / 100) * 0.75rem);
 }
 
 /*

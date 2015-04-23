@@ -14,6 +14,10 @@ Just a file for implementing the required styles for the examples.
     @extend %headerFont;
 }
 
+%bodyFont {
+    @extend %headerFont;
+}
+
 @import "material";
 
 body {
@@ -215,4 +219,10 @@ h1.mt-A400 {
     & :last-child {
         @extend %mt-paperFibers;
     }
+}
+.branding {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 $mt-basePadding $mt-basePadding 0;
 }

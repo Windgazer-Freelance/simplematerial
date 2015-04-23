@@ -21,8 +21,8 @@ well be just a hyperlink.
     cursor: pointer;
     display: inline-block;
     line-height: 1;
-    margin: 0 0.6em 0.42em 0;
-    padding: 0.8em 0.6em;
+    margin: 0 ($mt-basePadding / 3) ($mt-basePadding / 4) 0;
+    padding: ($mt-basePadding / 2) ($mt-basePadding / 2);
     text-transform: uppercase;
     text-align: center;
 }
@@ -36,8 +36,10 @@ well be just a hyperlink.
 %mt-floatingAction {
     @extend %mt-flatButton;
     @extend %mt-s-floating;
-    width: 1.4em;
+    line-height: $mt-basePadding;
     border-radius: 50%;
+    padding: ($mt-basePadding / 2) ($mt-basePadding / 2);
+    width: $mt-basePadding;
 }
 
 /*
@@ -50,7 +52,8 @@ well be just a hyperlink.
 %mt-raisedButton {
     @extend %mt-flatButton;
     @extend %mt-s-raised;
-    border-radius: 0.15em;
+    border-radius: ($mt-basePadding / 8);
+    padding: ($mt-basePadding / 2) ($mt-basePadding);
 }
 
 /*
