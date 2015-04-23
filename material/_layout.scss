@@ -6,6 +6,8 @@ want my material design implementation to be simple and ready for the small apps
 work on, I decided to include this layout in the project, but leave it as an optional
 implementation.
 */
+$mt-menuWidth: $mt-basePadding * 6 !default;
+
 html, body, .body {
     height: 100%;
 }
@@ -46,6 +48,7 @@ menu {
     padding: ($mt-basePadding  / 2) 0 0 ($mt-basePadding / 3);
     position: relative;
     text-align: center;
+    width: $mt-menuWidth;
     z-index: 5;
 }
 
@@ -53,7 +56,6 @@ body > menu,
 .body > menu {
     @extend %mt-P500;
     @extend %mt-s-declinedRight !optional;
-    float: left;
 }
 
 menu > li {
@@ -92,12 +94,14 @@ body > article,
     @extend %mt-paperFibers;
     @extend %bodyFont !optional;
     box-sizing: border-box;
-    float: left;
-    height: 100%;
-    margin-bottom: -100%;
     overflow: auto; //articles are meant to be full-screen
     overflow-x: hidden;
     padding: 0 $mt-basePadding;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: $mt-menuWidth;
     opacity: 0;
 }
 
@@ -135,6 +139,7 @@ nav {
     left: 50%;
     padding: $mt-basePadding;
     position: absolute;
+    top: 0;
     width: $mt-basePadding * 15;
     z-index: 20;
 }
@@ -152,6 +157,7 @@ nav > menu {
     color: $mt-ct-p000;
     margin: 0 (-$mt-basePadding * 0.75) (-$mt-basePadding * 0.75);
     text-align: right;
+    width: auto;
 }
 nav > menu > li {
     display: inline-block;
@@ -161,7 +167,7 @@ nav > menu > li > a {
 }
 
 /*
-# Sneaky gradien overlay
+# Sneaky gradient overlay
 
 In my apps I have my branding inside an `em` element which is a sibling to my dialogs. As
 such I can abuse this branding to create my gradient overlay, preventing users from
