@@ -28,6 +28,7 @@ module.exports = function(grunt) {
                         src: [
                             "bower.json",
                             "**/_*.scss",
+                            "!target/**/*",
                             "!libs/**/*.scss"
                         ],
                         dest: "target/release.git/"
