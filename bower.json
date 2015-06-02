@@ -1,6 +1,6 @@
 {
   "name": "SimpleMaterial",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "_material.scss",
   "dependencies": {
     "sasstricks": "git://github.com/Windgazer-Freelance/sasstricks.git"
