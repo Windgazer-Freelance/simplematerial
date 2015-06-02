@@ -189,20 +189,15 @@ but should provide a better overal experience (I hope).
 %mt-keyframeRipple {
     @at-root {
         @keyframes mtRippleAnimation {
-            0% { background-size: 0; }
-            40%, 90% { background-size: 120%; background-position: 50% 50%; }
+            0% { background-size: 120%; }
             100% { background-size: 0; }
         }
     }
     &:focus {
-        @include vendor-prefix(animation-name, mtRippleAnimation);
-        @include vendor-prefix(animation-duration, 500ms);
-        //@include vendor-prefix(animation-timing-function, ease);
-        //@include vendor-prefix(animation-delay, 0s);
-        //@include vendor-prefix(animation-iteration-count, 1);
-        //@include vendor-prefix(animation-direction, normal);
-        @include vendor-prefix(animation-fill-mode, both); //override existing transitions
-        //@include vendor-prefix(animation-play-state, running);
+        animation-name: mtRippleAnimation;
+        animation-duration: 100ms;
+        animation-delay: 1s;
+        animation-fill-mode: forwards; //override existing transitions
     }
 }
 
