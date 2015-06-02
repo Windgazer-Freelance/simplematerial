@@ -226,8 +226,3 @@ h1.mt-A400 {
     right: 0;
     padding: 0 $mt-basePadding $mt-basePadding 0;
 }
-
-.mt-keyframedAnimation {
-    @extend %mt-flatButton;
-    @extend %mt-keyframeRipple;
-}

@@ -45,6 +45,16 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
     }
 }
 %mt-ripple-active {
+    @at-root {
+        @keyframes mtRippleAnimation {
+            0% { background-size: 120%; }
+            100% { background-size: 0; }
+        }
+    }
+    animation-duration: 100ms;
+    animation-delay: 1s;
+    animation-fill-mode: forwards; //override existing transitions
+    animation-name: mtRippleAnimation;
     background-position: 50% 50% !important;
     background-size: 110%;
     transition: background-size 250ms ease-in, background-position 50ms ease-in 200ms;
@@ -172,33 +182,6 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 %mt-raisedButtonA400 {
     @extend %mt-raisedButton;
     @extend %mt-A400;
-}
-
-/*
-# Alternate Button Animation
-
-Instead of the pretty advanced but quietly lacking `transition` method, this is an attempt
-at using keyframes to do the animation. This might be less functional on older browsers,
-but should provide a better overal experience (I hope).
-
-```
-<a class="mt-keyframedAnimation" href="#">Call to Action</a>
-```
-*/
-
-%mt-keyframeRipple {
-    @at-root {
-        @keyframes mtRippleAnimation {
-            0% { background-size: 120%; }
-            100% { background-size: 0; }
-        }
-    }
-    &:focus {
-        animation-name: mtRippleAnimation;
-        animation-duration: 100ms;
-        animation-delay: 1s;
-        animation-fill-mode: forwards; //override existing transitions
-    }
 }
 
 /*
