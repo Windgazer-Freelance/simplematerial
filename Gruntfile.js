@@ -11,14 +11,14 @@ module.exports = function(grunt) {
         buildVersion: grunt.template.today("yyyymmddHHMM"),
         // Task configuration.
         bumpup: {
-            files: ["package.json","bower.json"],
+            files: [ "package.json","bower.json" ],
             options: {
                 normalize: true
             }
         },
         clean: {
-            release: ["target"],
-            all: ["libs","node_modules"]
+            release: [ "target" ],
+            all: [ "libs","node_modules" ]
         },
         copy: {
             release: {
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
                     force: false
                 },
                 files: {
-                    src: ["."]
+                    src: [ "." ]
                 }
             },
             ghpages: {
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
                     force: false
                 },
                 files: {
-                    src: ["."]
+                    src: [ "." ]
                 }
             },
             source: {
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                     force: false
                 },
                 files: {
-                    src: ["."]
+                    src: [ "." ]
                 }
             }
         },
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
                     allowEmpty: true //In case of no changes since last dev build...
                 },
                 files: {
-                    src: ["."]
+                    src: [ "." ]
                 }
             },
             ghpages: {
@@ -112,7 +112,7 @@ module.exports = function(grunt) {
                     allowEmpty: true //In case of no changes since last dev build...
                 },
                 files: {
-                    src: ["."]
+                    src: [ "." ]
                 }
             },
             source: {
@@ -120,7 +120,7 @@ module.exports = function(grunt) {
                     message: "Version bump"
                 },
                 files: {
-                    src:["."]
+                    src: [ "." ]
                 }
             }
         },
@@ -219,13 +219,13 @@ module.exports = function(grunt) {
                 options: {
                     style: "compressed"
                 },
-                files: [{
+                files: [ {
                     expand: true,
                     flatten: true,
-                    src: ["*.scss","!_*.scss"],
+                    src: [ "*.scss","!_*.scss" ],
                     dest: "target/release",
                     ext: ".css"
-                }]
+                } ]
             },
             dev: {
                 options: {
@@ -233,20 +233,20 @@ module.exports = function(grunt) {
                     lineNumbers: true,
                     debugInfo: true
                 },
-                files: [{
+                files: [ {
                     expand: true,
                     flatten: true,
-                    src: ["*.scss","!_*.scss"],
+                    src: [ "*.scss","!_*.scss" ],
                     dest: "target/release",
                     ext: ".css"
-                }]
+                } ]
             }
         },
         watch: {
             sass: {
                 // We watch and compile sass files as normal but don"t live reload here
-                files: ["*.scss","**/*.scss"],
-                tasks: ["default"]
+                files: [ "*.scss","**/*.scss" ],
+                tasks: [ "default" ]
             },
             livereload: {
                 // Here we watch the files the sass task will compile to
@@ -255,7 +255,7 @@ module.exports = function(grunt) {
                     livereload: true,
                     cwd: "target/pages.git/"
                 },
-                files: ["*.css","*.html"]
+                files: [ "*.css","*.html" ]
             }
         }
     });
@@ -268,7 +268,7 @@ module.exports = function(grunt) {
             "render"
         ]
     );
-    grunt.registerTask( //Cleaning, cloning, mkdir, that sorta stuff
+    grunt.registerTask(//Cleaning, cloning, mkdir, that sorta stuff
         "prep",
         [
             "clean:release",
@@ -277,7 +277,7 @@ module.exports = function(grunt) {
             "gitclone:ghpages"
         ]
     );
-    grunt.registerTask( //Copying, parsing, compiling, you know the drill
+    grunt.registerTask(//Copying, parsing, compiling, you know the drill
         "render",
         [
             "copy:release",
@@ -285,7 +285,7 @@ module.exports = function(grunt) {
             "sd"
         ]
     );
-    grunt.registerTask( //Running servers, file-watching, the whole sh'bang
+    grunt.registerTask(//Running servers, file-watching, the whole sh'bang
         "host",
         [
             "default",
@@ -323,7 +323,7 @@ module.exports = function(grunt) {
      "before live!\n" +
      "'dev' will commit and push to release branch without confirmation.\n" +
      "'prep' will stash anything on current branch and checkout master branch.",
-      function (type) {
+      function(type) {
         var isDev = type === "dev";
         if (!isDev) {
             grunt.task.run("releaseclean");

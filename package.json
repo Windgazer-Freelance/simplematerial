@@ -4,6 +4,7 @@
     "fullName": "Simple Material Design",
     "safeName": "SimpleMaterial",
     "description": "A simplistic SASS implementation of Material Design.",
+    "license": "MIT",
     "id": "na"
   },
   "author": {
@@ -20,18 +21,18 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "grunt": "^0.4.1",
     "grunt-bumpup": "^0.6.2",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-cssmin": "^0.12.2",
-    "grunt-contrib-sass": "^0.5.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-git": "^0.3.4",
-    "grunt-http-server": "^1.2.0",
-    "grunt-mkdir": "^0.1.2",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^01.0.0",
+    "grunt-contrib-cssmin": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-git": "^1.0.0",
+    "grunt-http-server": "^2.0.0",
+    "grunt-mkdir": "^1.0.0",
     "grunt-usemin": "^3.0.0",
-    "matchdep": "~0.1.2"
+    "grunt": "^1.0.0",
+    "matchdep": "^1.0.0"
   },
   "engine": "node 0.8.12",
   "scripts": {
