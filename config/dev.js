@@ -1,3 +1,14 @@
+var grunt = require("grunt");
+
+grunt.registerTask(//Running servers, file-watching, the whole sh'bang
+    "host",
+    [
+        "default",
+        "http-server:dev",
+        "watch"
+    ]
+);
+
 module.exports.tasks = {
     // Task configuration.
     "http-server": {
