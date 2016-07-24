@@ -8,6 +8,7 @@ module.exports.tasks = {
                         "bower.json",
                         "**/_*.scss",
                         "!target/**/*",
+                        "!config/*",
                         "!libs/**/*.scss"
                     ],
                     dest: "target/release.git/"
