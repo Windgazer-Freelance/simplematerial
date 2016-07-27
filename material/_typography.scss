@@ -20,14 +20,14 @@
 ```
 
 */
-$mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 %mt-headers {
     @extend %reset;
     &:first-child {
         margin-top: 0;
     }
+
     @extend %headerFont !optional;
-    margin: 0 0 ((round(24 / 0.15) / 100) * 0.75rem);
+    margin: 0 0 sp2rem(24);
 }
 
 /*
@@ -39,7 +39,7 @@ $mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 */
 %mt-display4 {
     @extend %mt-headers;
-    font-size: (round(112 / 0.15) / 100) * 1em;
+    font-size: sp2rem(112);
     font-weight: 300;
 }
 
@@ -52,7 +52,7 @@ $mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 */
 %mt-display3 {
     @extend %mt-headers;
-    font-size: (round(56 / 0.15) / 100) * 1em;
+    font-size: sp2rem(56);
 }
 
 /*
@@ -64,7 +64,7 @@ $mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 */
 %mt-display2 {
     @extend %mt-headers;
-    font-size: (round(45 / 0.15) / 100) * 1em;
+    font-size: sp2rem(45);
 }
 
 /*
@@ -76,7 +76,7 @@ $mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 */
 %mt-display1 {
     @extend %mt-headers;
-    font-size: (round(34 / 0.15) / 100) * 1em;
+    font-size: sp2rem(34);
 }
 
 /*
@@ -87,7 +87,7 @@ $mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 */
 %mt-headline {
     @extend %mt-headers;
-    font-size: (round(24 / 0.15) / 100) * 1em;
+    font-size: sp2rem(24);
 }
 
 /*
@@ -99,7 +99,7 @@ $mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 */
 %mt-title {
     @extend %mt-headers;
-    font-size: (round(21 / 0.15) / 100) * 1em;
+    font-size: sp2rem(21);
     font-weight: 500;
 }
 
@@ -112,7 +112,7 @@ $mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 */
 %mt-subhead {
     @extend %mt-headers;
-    font-size: (round(17 / 0.15) / 100) * 1em;
+    font-size: sp2rem(17);
 }
 
 /*
@@ -124,7 +124,7 @@ $mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 */
 %mt-body2 {
     @extend %mt-headers;
-    font-size: (round(15 / 0.15) / 100) * 1em;
+    font-size: sp2rem(15);
     font-weight: 500;
 }
 
@@ -137,7 +137,7 @@ $mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 */
 %mt-body1 {
     @extend %mt-headers;
-    font-size: (round(15 / 0.15) / 100) * 1em;
+    font-size: sp2rem(15);
 }
 
 /*
@@ -149,7 +149,7 @@ $mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 */
 %mt-caption {
     @extend %mt-headers;
-    font-size: (round(13 / 0.15) / 100) * 1em;
+    font-size: sp2rem(13);
 }
 
 /*
@@ -162,8 +162,8 @@ $mt-basePadding: (round(24 / 0.15) / 100) * 1em !default;
 %mt-button {
     @extend %reset;
     @extend %buttonFont !optional;
-    font-size: (round(15 / 0.15) / 100) * 1em;
-    font-weight: 500;
     color: inherit;
+    font-size: sp2rem(15);
+    font-weight: 500;
     text-decoration: none;
 }

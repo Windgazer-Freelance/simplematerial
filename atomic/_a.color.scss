@@ -1,0 +1,76 @@
+/*
+# Primary colour
+
+```
+<div class="mt-P500">Primary colour-scheme</div>
+```
+*/
+%mt-P500 {
+    @include setPColors(3);
+}
+
+/*
+# Dark Primary colour
+
+```
+<div class="mt-P700">Dark Primary colour-scheme</div>
+```
+*/
+%mt-P700 {
+    @include setPColors(4);
+}
+
+/*
+# Light Primary colour
+
+```
+<div class="mt-P100">Light Primary colour-scheme</div>
+```
+*/
+%mt-P100 {
+    @include setPColors(2);
+}
+
+/*
+# Primary Body colours
+
+```
+<div class="mt-P000">Primary Body colour-scheme</div>
+```
+*/
+%mt-P000 {
+    @include setPColors(1);
+}
+
+/*
+# Accent Colour
+
+```
+<div class="mt-A200">Accent Colour-scheme</div>
+```
+*/
+%mt-A200 {
+    @include setAColors(2);
+}
+
+/*
+# Dark Accent Colour
+
+```
+<div class="mt-A400">Dark Accent Colour-scheme</div>
+```
+*/
+%mt-A400 {
+    @include setAColors(3);
+}
+
+/*
+# Light Accent Colour
+
+```
+<div class="mt-A100">Light Accent Colour-scheme</div>
+```
+*/
+%mt-A100 {
+    @include setAColors(1);
+}

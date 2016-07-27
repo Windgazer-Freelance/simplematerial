@@ -1,0 +1,11 @@
+@mixin setPColors($n) {
+    background-color: nth($mt-cp, $n);
+    border-color: nth($mt-cp, $n);
+    color: nth($mt-ctp, $n);
+}
+
+@mixin setAColors($n) {
+    background-color: nth($mt-ca, $n);
+    border-color: nth($mt-ca, $n);
+    color: nth($mt-ctp, $n);
+}
