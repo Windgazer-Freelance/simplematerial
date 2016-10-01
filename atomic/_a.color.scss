@@ -49,7 +49,7 @@
 <div class="mt-A200">Accent Colour-scheme</div>
 ```
 */
-%mt-A200 {
+%a__alternate-color200 {
     @include e__color--secondary(2);
 }
 
@@ -60,7 +60,7 @@
 <div class="mt-A400">Dark Accent Colour-scheme</div>
 ```
 */
-%mt-A400 {
+%a__alternate-color400 {
     @include e__color--secondary(3);
 }
 
@@ -71,6 +71,6 @@
 <div class="mt-A100">Light Accent Colour-scheme</div>
 ```
 */
-%mt-A100 {
+%a__alternate-color100 {
     @include e__color--secondary(1);
 }

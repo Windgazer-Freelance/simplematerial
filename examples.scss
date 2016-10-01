@@ -116,15 +116,15 @@ h1.mt-A400 {
 }
 
 .mt-A400 {
-    @extend %mt-A400;
+    @extend %a__alternate-color400;
 }
 
 .mt-A200 {
-    @extend %mt-A200;
+    @extend %a__alternate-color200;
 }
 
 .mt-A100 {
-    @extend %mt-A100;
+    @extend %a__alternate-color100;
 }
 
 .mt-flatButton {
