@@ -1,10 +1,24 @@
-@mixin setPColors($n) {
+/**
+# Set Color / Background combination
+
+## Set normal
+This electron is used to set the foreground, border and background color based on the
+presets.
+
+*/
+@mixin e__color--primary($n) {
     background-color: nth($mt-cp, $n);
     border-color: nth($mt-cp, $n);
     color: nth($mt-ctp, $n);
 }
 
-@mixin setAColors($n) {
+/**
+## Set normal
+This electron is used to set the oposite foreground, border and background color based on
+the presets.
+
+*/
+@mixin e__color--secondary($n) {
     background-color: nth($mt-ca, $n);
     border-color: nth($mt-ca, $n);
     color: nth($mt-ctp, $n);

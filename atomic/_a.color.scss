@@ -6,7 +6,7 @@
 ```
 */
 %mt-P500 {
-    @include setPColors(3);
+    @include e__color--primary(3);
 }
 
 /*
@@ -17,7 +17,7 @@
 ```
 */
 %mt-P700 {
-    @include setPColors(4);
+    @include e__color--primary(4);
 }
 
 /*
@@ -28,7 +28,7 @@
 ```
 */
 %mt-P100 {
-    @include setPColors(2);
+    @include e__color--primary(2);
 }
 
 /*
@@ -39,7 +39,7 @@
 ```
 */
 %mt-P000 {
-    @include setPColors(1);
+    @include e__color--primary(1);
 }
 
 /*
@@ -50,7 +50,7 @@
 ```
 */
 %mt-A200 {
-    @include setAColors(2);
+    @include e__color--secondary(2);
 }
 
 /*
@@ -61,7 +61,7 @@
 ```
 */
 %mt-A400 {
-    @include setAColors(3);
+    @include e__color--secondary(3);
 }
 
 /*
@@ -72,5 +72,5 @@
 ```
 */
 %mt-A100 {
-    @include setAColors(1);
+    @include e__color--secondary(1);
 }
