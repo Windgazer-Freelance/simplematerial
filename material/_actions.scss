@@ -30,6 +30,7 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
+
 %mt-touchdot {
     @extend %mt-bgcircle;
     height: 1em;
@@ -39,33 +40,42 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
     position: absolute;
     transition: opacity 250ms ease-in 250ms;
     width: 1em;
+
     &.on {
-        transition: none;
         opacity: 1;
+        transition: none;
     }
 }
+
 %mt-ripple-active {
     @at-root {
         @keyframes mtRippleAnimation {
-            0% { background-size: 120%; }
-            100% { background-size: 0; }
+            0% {
+                background-size: 120%;
+            }
+            100% {
+                background-size: 0;
+            }
         }
     }
-    animation-duration: 100ms;
     animation-delay: 1s;
+    animation-duration: 100ms;
     animation-fill-mode: forwards; //override existing transitions
     animation-name: mtRippleAnimation;
     background-position: 50% 50% !important;
     background-size: 110%;
     transition: background-size 250ms ease-in, background-position 50ms ease-in 200ms;
 }
+
 %mt-ripple {
     @extend %mt-bgcircle;
     background-size: 0;
     &:focus {
         @extend %mt-ripple-active;
     }
-}/*
+}
+
+/*
 # Flat Button
 
 ```
@@ -81,8 +91,8 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
     line-height: 1;
     margin: 0 ($mt-basePadding / 3) ($mt-basePadding / 4) 0;
     padding: ($mt-basePadding / 2) ($mt-basePadding / 2);
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
 }
 
 /*
@@ -94,8 +104,8 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 %mt-floatingAction {
     @extend %mt-flatButton;
     @extend %mt-s-floating;
-    line-height: $mt-basePadding;
     border-radius: 50%;
+    line-height: $mt-basePadding;
     padding: ($mt-basePadding / 2) ($mt-basePadding / 2);
     width: $mt-basePadding;
 }
@@ -133,7 +143,7 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 */
 %mt-floatingActionA400 {
     @extend %mt-floatingAction;
-    @extend %mt-A400;
+    @extend %a__alternate-color400;
 }
 
 /*
@@ -181,28 +191,30 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 */
 %mt-raisedButtonA400 {
     @extend %mt-raisedButton;
-    @extend %mt-A400;
+    @extend %a__alternate-color400;
 }
 
 /*
 #TODO
 */
 %declined {
-    box-shadow: inset 0 0 0.1em rgba( 0,0,0 ,0.35 ),
-                inset 0.05em 0.1em 0.1em rgba( 0,0,0 ,0.35 );
+    box-shadow:
+        inset 0 0 0.1em rgba(0, 0, 0, 0.35),
+        inset 0.05em 0.1em 0.1em rgba(0, 0, 0, 0.35);
 }
 
 %mt-flatButtonIcon {
     height: 1em;
-    width: 1.4em;
     overflow: hidden;
     text-align: center;
+    width: 1.4em;
+
     &::before {
         display: inline-block;
-        width: 100%;
-        margin: 0 1em 1em 0;
         font-family: '42tiles';
         font-weight: 300;
+        margin: 0 1em 1em 0;
+        width: 100%;
     }
 }
 
