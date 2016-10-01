@@ -22,12 +22,11 @@
 */
 %mt-headers {
     @extend %reset;
-    &:first-child {
-        margin-top: 0;
-    }
-
     @extend %headerFont !optional;
-    margin: 0 0 sp2rem(24);
+
+    @include e__owl {
+        margin-top: sp2rem(24);
+    }
 }
 
 /*
