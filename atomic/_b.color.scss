@@ -28,24 +28,24 @@ them before importing the `_colours.scss` file.
 </dl>
 ```
 */
-$mt-c-P700: #D32F2F !default;
-$mt-c-P500: #F44336 !default;
-$mt-c-P100: #FFCDD2 !default;
-$mt-c-P000: #FFFFFF !default;
-$mt-cp: $mt-c-P000 $mt-c-P100 $mt-c-P500 $mt-c-P700;
+$b__color--primary__700: #D32F2F !default;
+$b__color--primary__500: #F44336 !default;
+$b__color--primary__100: #FFCDD2 !default;
+$b__color--primary__000: #FFFFFF !default;
+$mt-cp: $b__color--primary__000 $b__color--primary__100 $b__color--primary__500 $b__color--primary__700;
 
-$mt-c-A400: #BDBDBD !default;
-$mt-c-A200: #EEEEEE !default;
-$mt-c-A100: #F5F5F5 !default;
-$mt-ca: $mt-c-A100 $mt-c-A200 $mt-c-A400;
+$b__color--alternate__400: #BDBDBD !default;
+$b__color--alternate__200: #EEEEEE !default;
+$b__color--alternate__100: #F5F5F5 !default;
+$mt-ca: $b__color--alternate__100 $b__color--alternate__200 $b__color--alternate__400;
 
-$mt-ct-P700: white !default;
-$mt-ct-P500: $mt-ct-P700 !default;
-$mt-ct-P100: #000000 !default;
-$mt-ct-p000: #000000 !default;
-$mt-ctp: $mt-ct-p000 $mt-ct-P100 $mt-ct-P500 $mt-ct-P700;
+$b__color--transparent__700: white !default;
+$b__color--transparent__500: $b__color--transparent__700 !default;
+$b__color--transparent__100: #000000 !default;
+$b__color--transparent__000: #000000 !default;
+$mt-ctp: $b__color--transparent__000 $b__color--transparent__100 $b__color--transparent__500 $b__color--transparent__700;
 
-$mt-ct-A400: white !default;
-$mt-ct-A200: $mt-ct-A400 !default;
-$mt-ct-A100: $mt-ct-A200 !default;
-$mt-cta: $mt-ct-A100 $mt-ct-A200 $mt-ct-A400;
+$b__color--alternate-transparent__400: white !default;
+$b__color--alternate-transparent__200: $b__color--alternate-transparent__400 !default;
+$b__color--alternate-transparent__100: $b__color--alternate-transparent__200 !default;
+$mt-cta: $b__color--alternate-transparent__100 $b__color--alternate-transparent__200 $b__color--alternate-transparent__400;

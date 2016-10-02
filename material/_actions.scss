@@ -155,7 +155,7 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 */
 %mt-flatButtonP500 {
     @extend %mt-flatButton;
-    color: $mt-c-P500;
+    color: $b__color--primary__500;
 }
 
 /*
@@ -167,7 +167,7 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 */
 %mt-flatButtonA400 {
     @extend %mt-flatButton;
-    color: $mt-c-A400;
+    color: $b__color--alternate__400;
 }
 
 /*
