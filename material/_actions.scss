@@ -89,8 +89,8 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
     cursor: pointer;
     display: inline-block;
     line-height: 1;
-    margin: 0 ($mt-basePadding / 3) ($mt-basePadding / 4) 0;
-    padding: ($mt-basePadding / 2) ($mt-basePadding / 2);
+    margin: 0 ($b__base-padding / 3) ($b__base-padding / 4) 0;
+    padding: ($b__base-padding / 2) ($b__base-padding / 2);
     text-align: center;
     text-transform: uppercase;
 }
@@ -105,9 +105,9 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
     @extend %mt-flatButton;
     @extend %mt-s-floating;
     border-radius: 50%;
-    line-height: $mt-basePadding;
-    padding: ($mt-basePadding / 2) ($mt-basePadding / 2);
-    width: $mt-basePadding;
+    line-height: $b__base-padding;
+    padding: ($b__base-padding / 2) ($b__base-padding / 2);
+    width: $b__base-padding;
 }
 
 /*
@@ -120,8 +120,8 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 %mt-raisedButton {
     @extend %mt-flatButton;
     @extend %mt-s-raised;
-    border-radius: ($mt-basePadding / 8);
-    padding: ($mt-basePadding / 2) ($mt-basePadding);
+    border-radius: ($b__base-padding / 8);
+    padding: ($b__base-padding / 2) ($b__base-padding);
 }
 
 /*

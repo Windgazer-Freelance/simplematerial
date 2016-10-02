@@ -10,7 +10,7 @@ provide all the 'reality', such as shadows, textures, etc.
 
 All of these settings can be defined in your own file before including this partial.
 */
-$mt-shadowSize: ($mt-basePadding / 8) !default;
+$mt-shadowSize: ($b__base-padding / 8) !default;
 $mt-shadowOffset: $mt-shadowSize !default;
 $mt-c-shadow: rgba( 0,0,0 ,0.25 ) !default;
 
