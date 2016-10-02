@@ -25,7 +25,7 @@
     @extend %headerFont !optional;
 
     @include e__owl {
-        margin-top: sp2rem(24);
+        margin-top: e__sp-to-rem(24);
     }
 }
 
@@ -38,7 +38,7 @@
 */
 %mt-display4 {
     @extend %mt-headers;
-    font-size: sp2rem(112);
+    font-size: e__sp-to-rem(112);
     font-weight: 300;
 }
 
@@ -51,7 +51,7 @@
 */
 %mt-display3 {
     @extend %mt-headers;
-    font-size: sp2rem(56);
+    font-size: e__sp-to-rem(56);
 }
 
 /*
@@ -63,7 +63,7 @@
 */
 %mt-display2 {
     @extend %mt-headers;
-    font-size: sp2rem(45);
+    font-size: e__sp-to-rem(45);
 }
 
 /*
@@ -75,7 +75,7 @@
 */
 %mt-display1 {
     @extend %mt-headers;
-    font-size: sp2rem(34);
+    font-size: e__sp-to-rem(34);
 }
 
 /*
@@ -86,7 +86,7 @@
 */
 %mt-headline {
     @extend %mt-headers;
-    font-size: sp2rem(24);
+    font-size: e__sp-to-rem(24);
 }
 
 /*
@@ -98,7 +98,7 @@
 */
 %mt-title {
     @extend %mt-headers;
-    font-size: sp2rem(21);
+    font-size: e__sp-to-rem(21);
     font-weight: 500;
 }
 
@@ -111,7 +111,7 @@
 */
 %mt-subhead {
     @extend %mt-headers;
-    font-size: sp2rem(17);
+    font-size: e__sp-to-rem(17);
 }
 
 /*
@@ -123,7 +123,7 @@
 */
 %mt-body2 {
     @extend %mt-headers;
-    font-size: sp2rem(15);
+    font-size: e__sp-to-rem(15);
     font-weight: 500;
 }
 
@@ -136,7 +136,7 @@
 */
 %mt-body1 {
     @extend %mt-headers;
-    font-size: sp2rem(15);
+    font-size: e__sp-to-rem(15);
 }
 
 /*
@@ -148,7 +148,7 @@
 */
 %mt-caption {
     @extend %mt-headers;
-    font-size: sp2rem(13);
+    font-size: e__sp-to-rem(13);
 }
 
 /*
@@ -162,7 +162,7 @@
     @extend %reset;
     @extend %buttonFont !optional;
     color: inherit;
-    font-size: sp2rem(15);
+    font-size: e__sp-to-rem(15);
     font-weight: 500;
     text-decoration: none;
 }

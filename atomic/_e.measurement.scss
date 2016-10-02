@@ -1,3 +1,11 @@
-@function sp2rem($sp) {
-    @return (round($sp / 0.15) / 100) * 1rem;
+/**
+# Conversion of unit values
+
+## SP to REM
+
+SP (Scaleable Pixels) to REM (Relative to ɛm). In google's material design everything is
+designed against a 'Scaleable Pixels' unit value.
+*/
+@function e__sp-to-rem($b__sp) {
+    @return (round($b__sp / 0.15) / 100) * 1rem;
 }
