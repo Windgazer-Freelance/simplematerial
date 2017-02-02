@@ -5,7 +5,6 @@ module.exports.tasks = {
                 {
                     expand: true, flatten: false,
                     src: [
-                        "bower.json",
                         "**/_*.scss",
                         "!target/**/*",
                         "!config/*",

@@ -5,6 +5,7 @@
     "safeName": "SimpleMaterial",
     "description": "A simplistic SASS implementation of Material Design.",
     "license": "MIT",
+    "main": "_material.scss",
     "id": "na"
   },
   "author": {
