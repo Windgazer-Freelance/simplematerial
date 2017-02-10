@@ -46,7 +46,7 @@ module.exports.tasks = {
     sass: {
         options: {
             loadPath: [
-                "libs"
+                "node_modules"
             ],
         },
         std: {
