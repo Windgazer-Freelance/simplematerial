@@ -8,7 +8,7 @@ module.exports.tasks = {
                         "**/_*.scss",
                         "!target/**/*",
                         "!config/*",
-                        "!libs/**/*.scss"
+                        "!node_modules/**/*.scss"
                     ],
                     dest: "target/release.git/"
                 }
