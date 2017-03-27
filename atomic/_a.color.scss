@@ -2,10 +2,10 @@
 # Primary colour
 
 ```
-<div class="mt-P500">Primary colour-scheme</div>
+<div class="a__primary-color500">Primary colour-scheme</div>
 ```
 */
-%mt-P500 {
+%a__primary-color500 {
     @include e__color--primary(3);
 }
 
@@ -13,10 +13,10 @@
 # Dark Primary colour
 
 ```
-<div class="mt-P700">Dark Primary colour-scheme</div>
+<div class="a__primary-color700">Dark Primary colour-scheme</div>
 ```
 */
-%mt-P700 {
+%a__primary-color700 {
     @include e__color--primary(4);
 }
 
@@ -24,10 +24,10 @@
 # Light Primary colour
 
 ```
-<div class="mt-P100">Light Primary colour-scheme</div>
+<div class="a__primary-color100">Light Primary colour-scheme</div>
 ```
 */
-%mt-P100 {
+%a__primary-color100 {
     @include e__color--primary(2);
 }
 
@@ -35,10 +35,10 @@
 # Primary Body colours
 
 ```
-<div class="mt-P000">Primary Body colour-scheme</div>
+<div class="a__primary-color000">Primary Body colour-scheme</div>
 ```
 */
-%mt-P000 {
+%a__primary-color000 {
     @include e__color--primary(1);
 }
 

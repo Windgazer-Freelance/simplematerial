@@ -56,7 +56,7 @@ menu {
 
 body > menu,
 .body > menu {
-    @extend %mt-P500;
+    @extend %a__primary-color500;
     @extend %mt-s-declinedRight !optional;
 }
 
@@ -92,7 +92,7 @@ content area, menu's excluded.
 */
 body > article,
 .body > article {
-    @extend %mt-P000;
+    @extend %a__primary-color000;
     @extend %mt-paperFibers;
     @extend %bodyFont !optional;
     bottom: 0;
@@ -134,7 +134,7 @@ Design [specifications on dialogs](http://www.google.com/design/spec/components/
 */
 nav {
     @extend %mt-s-floating;
-    @extend %mt-P000;
+    @extend %a__primary-color000;
     color: transparentize($b__color--transparent__000, 0.35);
     display: none;
     left: 50%;
@@ -151,7 +151,7 @@ nav.show {
 }
 
 nav > h1 {
-    @extend %mt-title;
+    @extend %a__header--title;
     color: $b__color--transparent__000;
 }
 

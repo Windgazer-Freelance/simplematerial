@@ -8,14 +8,14 @@ Any of the colours defined here are simply defaults and can be overwritten by de
 them before importing the `_colours.scss` file.
 
 ```
-<h1 class="mt-P500">Primary</h1>
+<h1 class="a__primary-color500">Primary</h1>
 <dl>
-    <dt class="mt-P100">100</dt>
-    <dd class="mt-P100">#F44336</dd>
-    <dt class="mt-P500">500</dt>
-    <dd class="mt-P500">#F44336</dd>
-    <dt class="mt-P700">700</dt>
-    <dd class="mt-P700">#F44336</dd>
+    <dt class="a__primary-color100">100</dt>
+    <dd class="a__primary-color100">#F44336</dd>
+    <dt class="a__primary-color500">500</dt>
+    <dd class="a__primary-color500">#F44336</dd>
+    <dt class="a__primary-color700">700</dt>
+    <dd class="a__primary-color700">#F44336</dd>
 </dl>
 <h1 class="mt-A400">Accent</h1>
 <dl>

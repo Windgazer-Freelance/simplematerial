@@ -5,6 +5,7 @@ Just a file for implementing the required styles for the examples.
 
 %headerFont {
     font-family: 'Roboto', sans-serif;
+
     @at-root {
         @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
     }
@@ -25,94 +26,94 @@ body {
     padding: 0.5em;
 }
 
-.mt-display4 {
-    @extend %mt-display4;
+.a__header--display4 {
+    @extend %a__header--display4;
 }
 
-.mt-display3 {
-    @extend %mt-display3;
+.a__header--display3 {
+    @extend %a__header--display3;
 }
 
-.mt-display2 {
-    @extend %mt-display2;
+.a__header--display2 {
+    @extend %a__header--display2;
 }
 
-.mt-display1 {
-    @extend %mt-display1;
+.a__header--display1 {
+    @extend %a__header--display1;
 }
 
-.mt-headline {
-    @extend %mt-headline;
+.a__header--headline {
+    @extend %a__header--headline;
 }
 
-.mt-title {
-    @extend %mt-title;
+.a__header--title {
+    @extend %a__header--title;
 }
 
-.mt-subhead {
-    @extend %mt-subhead;
+.a__header--subhead {
+    @extend %a__header--subhead;
 }
 
-.mt-body2 {
-    @extend %mt-subhead;
+.a__typography--body2 {
+    @extend %a__typography--body2;
 }
 
-.mt-body1 {
-    @extend %mt-subhead;
+.a__typography--body1 {
+    @extend %a__typography--body1;
 }
 
-.mt-caption {
-    @extend %mt-caption;
+.a__typography--caption {
+    @extend %a__typography--caption;
 }
 
-.mt-button {
-    @extend %mt-button;
+.a__typography--button {
+    @extend %a__typography--button;
 }
 
-h1.mt-P500,
+h1.a__primary-color500,
 h1.mt-A400 {
     @extend %headerFont !optional;
     margin-bottom: 0;
     padding: 1em;
 }
 
-.mt-P500 + dl,
+.a__primary-color500 + dl,
 .mt-A400 + dl {
     @extend %headerFont !optional;
     margin: 0;
 }
 
-.mt-P500 + dl > dt,
+.a__primary-color500 + dl > dt,
 .mt-A400 + dl > dt {
     float: left;
     padding: 1em;
 }
 
-.mt-P500 + dl > dd,
+.a__primary-color500 + dl > dd,
 .mt-A400 + dl > dd {
     margin: 0;
     text-align: right;
     padding: 1em;
 }
 
-.mt-P500 {
-    @extend %mt-P500;
+.a__primary-color500 {
+    @extend %a__primary-color500;
 }
 
-.mt-P700 {
-    @extend %mt-P700;
+.a__primary-color700 {
+    @extend %a__primary-color700;
 }
 
-.mt-P100 {
-    @extend %mt-P100;
+.a__primary-color100 {
+    @extend %a__primary-color100;
 }
 
-.mt-P000 {
-    @extend %mt-P000;
+.a__primary-color000 {
+    @extend %a__primary-color000;
 }
 
-.mt-P000 {
-    @extend %mt-P000;
+.a__primary-color000 {
+    @extend %a__primary-color000;
 }
 
 .mt-A400 {

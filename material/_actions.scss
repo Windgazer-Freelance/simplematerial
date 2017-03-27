@@ -79,12 +79,12 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 # Flat Button
 
 ```
-<a class="mt-flatButton" href="#">Call to Action</a>
+<a class="mt-flatButton" href="#dummy">Call to Action</a>
 ```
 */
 %mt-flatButton {
     @extend %reset;
-    @extend %mt-button;
+    @extend %a__typography--button;
     @extend %mt-ripple;
     cursor: pointer;
     display: inline-block;
@@ -98,7 +98,7 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 /*
 # Floating Action
 ```
-<a class="mt-floatingAction" href="#">+</a>
+<a class="mt-floatingAction" href="#dummy">+</a>
 ```
 */
 %mt-floatingAction {
@@ -114,7 +114,7 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 # Raised Button
 
 ```
-<a class="mt-raisedButton" href="#">Call to Action</a>
+<a class="mt-raisedButton" href="#dummy">Call to Action</a>
 ```
 */
 %mt-raisedButton {
@@ -127,18 +127,18 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 /*
 # Floating Action Primary Colour
 ```
-<a class="mt-floatingActionP500" href="#">+</a>
+<a class="mt-floatingActionP500" href="#dummy">+</a>
 ```
 */
 %mt-floatingActionP500 {
     @extend %mt-floatingAction;
-    @extend %mt-P500;
+    @extend %a__primary-color500;
 }
 
 /*
 # Floating Action Alternate Colour
 ```
-<a class="mt-floatingActionA400" href="#">+</a>
+<a class="mt-floatingActionA400" href="#dummy">+</a>
 ```
 */
 %mt-floatingActionA400 {
@@ -150,7 +150,7 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 # Flat Button Primary Colour
 
 ```
-<a class="mt-flatButtonP500" href="#">Call to Action</a>
+<a class="mt-flatButtonP500" href="#dummy">Call to Action</a>
 ```
 */
 %mt-flatButtonP500 {
@@ -162,7 +162,7 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 # Flat Button Alternate Colour
 
 ```
-<a class="mt-flatButtonA400" href="#">Call to Action</a>
+<a class="mt-flatButtonA400" href="#dummy">Call to Action</a>
 ```
 */
 %mt-flatButtonA400 {
@@ -174,19 +174,19 @@ http://www.google.com/design/spec/animation/responsive-interaction.html
 # Raised Button Primary Colour
 
 ```
-<a class="mt-raisedButtonP500" href="#">Call to Action</a>
+<a class="mt-raisedButtonP500" href="#dummy">Call to Action</a>
 ```
 */
 %mt-raisedButtonP500 {
     @extend %mt-raisedButton;
-    @extend %mt-P500;
+    @extend %a__primary-color500;
 }
 
 /*
 # Raised Button Alternate Colour
 
 ```
-<a class="mt-raisedButtonA400" href="#">Call to Action</a>
+<a class="mt-raisedButtonA400" href="#dummy">Call to Action</a>
 ```
 */
 %mt-raisedButtonA400 {
