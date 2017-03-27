@@ -19,15 +19,16 @@
 //Bosons
 @import "atomic/_b.color";
 @import "atomic/_b.measurement";
+@import "atomic/_b.paper-shadow";
 
 //Atoms
 @import "atomic/_a.color";
 @import "atomic/_a.header";
+@import "atomic/_a.paper";
 @import "atomic/_a.typography";
 
 //Molecules
 
 //Organisms
-@import "material/paper";
 @import "material/actions";
 @import "material/layout";

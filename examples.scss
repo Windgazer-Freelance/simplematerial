@@ -188,7 +188,7 @@ h1.mt-A400 {
 .mt-regionContainerBottomShadow {
     @extend %mt-regionContainer;
     & :first-child {
-        @extend %mt-s-raisedBottom;
+        @extend %a__paper-shadow--raised-bottom;
     }
     & :last-child {
         background-color: transparent;
@@ -197,13 +197,13 @@ h1.mt-A400 {
 .mt-regionContainerTopShadow {
     @extend %mt-regionContainer;
     & :last-child {
-        @extend %mt-s-declinedTop;
+        @extend %a__paper-shadow--declined-top;
     }
 }
 .mt-regionContainerRightShadow {
     @extend %mt-regionContainerSideBySide;
     & :first-child {
-        @extend %mt-s-raisedRight;
+        @extend %a__paper-shadow--raised-right;
     }
     & :last-child {
         background-color: transparent;
@@ -212,13 +212,13 @@ h1.mt-A400 {
 .mt-regionContainerLeftShadow {
     @extend %mt-regionContainerSideBySide;
     & :last-child {
-        @extend %mt-s-declinedLeft;
+        @extend %a__paper-shadow--declined-left;
     }
 }
 .mt-regionContainerPaperFiber {
     @extend .mt-regionContainerTopShadow;
     & :last-child {
-        @extend %mt-paperFibers;
+        @extend %a__paper-fibers;
     }
 }
 .branding {

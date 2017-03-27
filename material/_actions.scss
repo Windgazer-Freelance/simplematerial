@@ -36,7 +36,7 @@ well be just a hyperlink.
 */
 %mt-floatingAction {
     @extend %mt-flatButton;
-    @extend %mt-s-floating;
+    @extend %a__paper-shadow--floating;
     border-radius: 50%;
     line-height: $b__spacing--unrelated;
     padding: $b__spacing--associated;
@@ -52,7 +52,7 @@ well be just a hyperlink.
 */
 %mt-raisedButton {
     @extend %mt-flatButton;
-    @extend %mt-s-raised;
+    @extend %a__paper-shadow--raised;
     border-radius: ($b__spacing--associated / 4);
     padding: ($b__spacing--associated * 1.5) ($b__spacing--associated * 2);
 }

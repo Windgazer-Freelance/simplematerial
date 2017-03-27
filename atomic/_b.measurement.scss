@@ -1,3 +1,6 @@
 $b__spacing--associated: e__sp-to-rem(8) !default;
 $b__spacing--related: e__sp-to-rem(16) !default;
 $b__spacing--unrelated: e__sp-to-rem(24) !default;
+
+$b__shadow--size: ($b__spacing--unrelated / 8) !default;
+$b__shadow--offset: $b__shadow--size !default;
