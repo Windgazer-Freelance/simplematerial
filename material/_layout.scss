@@ -6,7 +6,7 @@ want my material design implementation to be simple and ready for the small apps
 work on, I decided to include this layout in the project, but leave it as an optional
 implementation.
 */
-$mt-menuWidth: $b__base-padding * 6 !default;
+$mt-menuWidth: $b__spacing--unrelated * 6 !default;
 
 html,
 body,
@@ -27,7 +27,7 @@ body,
 }
 
 p {
-    margin: 0 0 $b__base-padding;
+    margin: 0 0 $b__spacing--unrelated;
 }
 
 /*
@@ -47,7 +47,7 @@ menu {
     box-sizing: border-box;
     height: 100%;
     margin: 0;
-    padding: ($b__base-padding  / 2) 0 0 ($b__base-padding / 3);
+    padding: ($b__spacing--unrelated  / 2) 0 0 ($b__spacing--unrelated / 3);
     position: relative;
     text-align: center;
     width: $mt-menuWidth;
@@ -101,7 +101,7 @@ body > article,
     opacity: 0;
     overflow: auto; //articles are meant to be full-screen
     overflow-x: hidden;
-    padding: 0 $b__base-padding;
+    padding: 0 $b__spacing--unrelated;
     position: absolute;
     right: 0;
     top: 0;
@@ -138,11 +138,11 @@ nav {
     color: transparentize($b__color--transparent__000, 0.35);
     display: none;
     left: 50%;
-    margin: $b__base-padding $b__base-padding $b__base-padding (-$b__base-padding * 7.5);
-    padding: $b__base-padding;
+    margin: $b__spacing--unrelated $b__spacing--unrelated $b__spacing--unrelated (-$b__spacing--unrelated * 7.5);
+    padding: $b__spacing--unrelated;
     position: absolute;
     top: 0;
-    width: $b__base-padding * 15;
+    width: $b__spacing--unrelated * 15;
     z-index: 20;
 }
 
@@ -157,7 +157,7 @@ nav > h1 {
 
 nav > menu {
     color: $b__color--transparent__000;
-    margin: 0 (-$b__base-padding * 0.75) (-$b__base-padding * 0.75);
+    margin: 0 (-$b__spacing--unrelated * 0.75) (-$b__spacing--unrelated * 0.75);
     text-align: right;
     width: auto;
 
