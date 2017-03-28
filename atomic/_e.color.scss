@@ -7,9 +7,9 @@ presets.
 
 */
 @mixin e__color--primary($n) {
-    background-color: nth($mt-cp, $n);
-    border-color: nth($mt-cp, $n);
-    color: nth($mt-ctp, $n);
+    background-color: nth($b__colors--primary, $n);
+    border-color: nth($b__colors--primary, $n);
+    color: nth($b__colors--transparent, $n);
 }
 
 /**
@@ -19,7 +19,7 @@ the presets.
 
 */
 @mixin e__color--secondary($n) {
-    background-color: nth($mt-ca, $n);
-    border-color: nth($mt-ca, $n);
-    color: nth($mt-ctp, $n);
+    background-color: nth($b__colors--alternate, $n);
+    border-color: nth($b__colors--alternate, $n);
+    color: nth($b__colors--transparent, $n);
 }

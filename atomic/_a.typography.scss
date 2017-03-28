@@ -44,7 +44,6 @@
 %a__typography--button {
     @extend %reset;
     @extend %font--button !optional;
-    color: inherit;
     font-size: e__sp-to-rem(15);
     font-weight: 500;
     text-decoration: none;
