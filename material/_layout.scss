@@ -65,7 +65,7 @@ menu > li {
 }
 
 menu > li > a {
-    @extend %mt-flatButton;
+    @extend %m__actions__cta--flat;
 }
 
 /*
@@ -165,7 +165,7 @@ nav > menu {
         display: inline-block;
 
         > a {
-            @extend %mt-flatButtonP500;
+            @extend %m__actions__cta--flat-P500;
         }
     }
 }
