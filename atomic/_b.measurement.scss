@@ -4,3 +4,5 @@ $b__spacing--unrelated: e__sp-to-rem(24) !default;
 
 $b__shadow--size: ($b__spacing--unrelated / 8) !default;
 $b__shadow--offset: $b__shadow--size !default;
+
+$b__menu-width: $b__spacing--unrelated * 6 !default;

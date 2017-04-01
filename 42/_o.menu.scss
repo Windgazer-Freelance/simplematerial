@@ -1,0 +1,37 @@
+/*
+# Menu
+
+I'd like to use the actual `menu` element. And my current apps are to have a permanent
+side-menu.
+
+```
+<menu>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+</menu>
+```
+*/
+menu {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: ($b__spacing--unrelated  / 2) 0 0 ($b__spacing--unrelated / 3);
+    position: relative;
+    text-align: center;
+    width: $b__menu-width;
+    z-index: 5;
+}
+
+body > menu,
+.body > menu {
+    @extend %a__primary-color500;
+    @extend %a__paper-shadow--declinedRight !optional;
+}
+
+menu > li {
+    @extend %reset;
+}
+
+menu > li > a {
+    @extend %m__actions__cta--flat;
+}
