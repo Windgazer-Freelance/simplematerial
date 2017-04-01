@@ -2,6 +2,7 @@
 Just a file for implementing the required styles for the examples.
 */
 @import "Sasstricks/utils";
+@import "atomic/b.icon-font__font-awesome";
 
 %headerFont {
     font-family: 'Roboto', sans-serif;
@@ -162,6 +163,16 @@ h1.mt-A400 {
 
 .m__actions__cta--raised-A400 {
     @extend %m__actions__cta--raised-A400;
+}
+
+.m__actions__cta--flat-download {
+    @extend %m__actions__cta--flat;
+    @extend %m__cta--icon-download;
+}
+
+.m__actions__cta--raised-download {
+    @extend %m__actions__cta--raised;
+    @extend %m__cta--icon-download;
 }
 
 %mt-regionContainer {

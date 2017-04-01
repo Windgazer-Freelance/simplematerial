@@ -125,3 +125,12 @@ well be just a hyperlink.
     @extend %m__actions__cta--raised;
     @extend %a__alternate-color400;
 }
+
+%m__actions__cta--icon {
+    &::before {
+        @extend %font--icon !optional;
+        display: inline-block;
+        font-weight: normal;
+        margin-right: $b__spacing--associated;
+    }
+}
