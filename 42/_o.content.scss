@@ -22,19 +22,9 @@ content area, menu's excluded.
 */
 body > article,
 .body > article {
-    @extend %a__primary-color000;
     @extend %a__paper-fibers;
-    @extend %bodyFont !optional;
-    bottom: 0;
-    box-sizing: border-box;
-    left: $b__menu-width;
+    @extend %m__content;
     opacity: 0;
-    overflow: auto; //articles are meant to be full-screen
-    overflow-x: hidden;
-    padding: 0 $b__spacing--unrelated;
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 
 body > article:target,
