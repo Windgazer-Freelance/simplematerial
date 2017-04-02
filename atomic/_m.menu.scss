@@ -1,0 +1,20 @@
+%m__menu {
+    @extend %a__whitespace--container;
+    @extend %a__primary-color500;
+    @extend %a__paper-shadow--declinedRight !optional;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    width: $b__menu-width;
+    z-index: $b__z-index--menu;
+}
+
+%m__menu--item {
+    @extend %reset;
+}
+
+%m__menu--cta {
+    @extend %m__actions__cta--flat;
+}
