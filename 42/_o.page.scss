@@ -9,6 +9,7 @@ implementation.
 html,
 body,
 .body {
+    @extend %reset;
     height: 100%;
 }
 
@@ -25,5 +26,9 @@ body,
 }
 
 p {
-    margin: 0 0 $b__spacing--unrelated;
+    @extend %reset;
+}
+
+* + p {
+    margin-top: $b__spacing--associated;
 }
