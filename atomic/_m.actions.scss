@@ -21,7 +21,7 @@ well be just a hyperlink.
     @extend %e__ripple;
     @extend %a__whitespace--dropshadow;
     @extend %a__whitespace--inline-block;
-    border-radius: ($b__spacing--associated / 4);
+    @extend %a__borders__rounding--associated;
     cursor: pointer;
     display: inline-block;
     line-height: 1;

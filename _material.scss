@@ -23,6 +23,7 @@
 @import "atomic/b.z-index";
 
 //Atoms
+@import "atomic/a.borders";
 @import "atomic/a.color";
 @import "atomic/a.header";
 @import "atomic/a.paper";
@@ -32,6 +33,7 @@
 //Molecules
 @import "atomic/m.actions";
 @import "atomic/m.content";
+@import "atomic/m.dialog";
 @import "atomic/m.menu";
 
 //Organisms

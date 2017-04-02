@@ -2,6 +2,10 @@
     padding: $b__spacing--related;
 }
 
+%a__whitespace--standalone {
+    padding: $b__spacing--unrelated;
+}
+
 %a__whitespace--dropshadow {
     margin: 0 $b__spacing--associated $b__spacing--associated 0;
 }
