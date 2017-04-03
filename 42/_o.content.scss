@@ -6,18 +6,20 @@ expected to be wrapped in an `article` element. These are expected to take up th
 content area, menu's excluded.
 
 ```
-<menu>
-    <li><a href="#__preview__">Home</a></li>
-    <li><a href="#about">About</a></li>
-</menu>
-<article id="__preview__">
-    <h1>Some testing required!</h1>
-    <p>This is just a test layout. Should be easy to use in my HTML5 app development.</p>
-</article>
-<article id="about">
-    <h1>Some explaining required!</h1>
-    <p>Just a simple way of navigating between pages, without any need for javascript</p>
-</article>
+<main class="body">
+    <menu>
+        <li><a href="#__preview__">Home</a></li>
+        <li><a href="#about">About</a></li>
+    </menu>
+    <article id="__preview__">
+        <h1>Some testing required!</h1>
+        <p>This is just a test layout. Should be easy to use in my HTML5 app development.</p>
+    </article>
+    <article id="about">
+        <h1>Some explaining required!</h1>
+        <p>Just a simple way of navigating between pages, without any need for javascript</p>
+    </article>
+</main>
 ```
 */
 body > article,
