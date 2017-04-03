@@ -24,7 +24,7 @@ content area, menu's excluded.
 */
 body > article,
 .body > article {
-    @extend %a__paper-fibers;
+    @extend %a__paper-fibres;
     @extend %m__content;
     opacity: 0;
 }

@@ -72,26 +72,26 @@ body {
 }
 
 h1.a__primary-color500,
-h1.mt-A400 {
+h1.a__alternate-color400 {
     @extend %headerFont !optional;
     margin-bottom: 0;
     padding: 1em;
 }
 
 .a__primary-color500 + dl,
-.mt-A400 + dl {
+.a__alternate-color400 + dl {
     @extend %headerFont !optional;
     margin: 0;
 }
 
 .a__primary-color500 + dl > dt,
-.mt-A400 + dl > dt {
+.a__alternate-color400 + dl > dt {
     float: left;
     padding: 1em;
 }
 
 .a__primary-color500 + dl > dd,
-.mt-A400 + dl > dd {
+.a__alternate-color400 + dl > dd {
     margin: 0;
     padding: 1em;
     text-align: right;
@@ -117,15 +117,15 @@ h1.mt-A400 {
     @extend %a__primary-color000;
 }
 
-.mt-A400 {
+.a__alternate-color400 {
     @extend %a__alternate-color400;
 }
 
-.mt-A200 {
+.a__alternate-color200 {
     @extend %a__alternate-color200;
 }
 
-.mt-A100 {
+.a__alternate-color100 {
     @extend %a__alternate-color100;
 }
 
@@ -175,7 +175,7 @@ h1.mt-A400 {
     @extend %m__cta--icon-download;
 }
 
-%mt-regionContainer {
+%x__region-container {
     & article {
         height: 5em;
         padding: 1em;
@@ -190,8 +190,8 @@ h1.mt-A400 {
     }
 }
 
-%mt-regionContainerSideBySide {
-    @extend %mt-regionContainer;
+%x__region-container--side-by-side {
+    @extend %x__region-container;
     & article {
         box-sizing: border-box;
         float: left;
@@ -199,8 +199,8 @@ h1.mt-A400 {
     }
 }
 
-.mt-regionContainerBottomShadow {
-    @extend %mt-regionContainer;
+.x__region-container--Bottom-shadow {
+    @extend %x__region-container;
     & :first-child {
         @extend %a__paper-shadow--raised-bottom;
     }
@@ -209,15 +209,15 @@ h1.mt-A400 {
     }
 }
 
-.mt-regionContainerTopShadow {
-    @extend %mt-regionContainer;
+.x__region-container--Top-shadow {
+    @extend %x__region-container;
     & :last-child {
         @extend %a__paper-shadow--declined-top;
     }
 }
 
-.mt-regionContainerRightShadow {
-    @extend %mt-regionContainerSideBySide;
+.x__region-container--Right-shadow {
+    @extend %x__region-container--side-by-side;
     & :first-child {
         @extend %a__paper-shadow--raised-right;
     }
@@ -226,17 +226,17 @@ h1.mt-A400 {
     }
 }
 
-.mt-regionContainerLeftShadow {
-    @extend %mt-regionContainerSideBySide;
+.x__region-container--Left-shadow {
+    @extend %x__region-container--side-by-side;
     & :last-child {
         @extend %a__paper-shadow--declined-left;
     }
 }
 
-.mt-regionContainerPaperFiber {
-    @extend .mt-regionContainerTopShadow;
+.x__region-container--paper-fibre {
+    @extend .x__region-container--Top-shadow;
     & :last-child {
-        @extend %a__paper-fibers;
+        @extend %a__paper-fibres;
     }
 }
 
