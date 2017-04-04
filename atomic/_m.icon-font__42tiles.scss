@@ -1,3 +1,5 @@
+$b__font-url--42tiles: '../static/font/42tiles.woff2' !default;
+
 /*
 #42tiles implementation
 
@@ -12,7 +14,7 @@ for button icons.
             font-family: '42tiles';
             font-style: normal;
             font-weight: normal;
-            src: url('?42tiles');
+            src: url($b__font-url--42tiles);
         }
     }
 }
