@@ -2,8 +2,8 @@
 
 This should be a simplistic implementation of Material Design. I'm attempting to stay
 close-ish to the [specs][1] defined by google. Although I'm not aiming for pixels, I've
-never believed in pixels, instead I'm using em's all the way, the base-font will determine
-what eventual size you end up with.
+never believed in pixels, instead I'm using (r)em's all the way, the base-font will
+determine what eventual size you end up with.
 
 I do try to adhere to the basic relative white-spacing / font-sizes that are in the
 [specs][1] and I try to keep to the 'plain' coloring and minimalistic drop-shadows as much
@@ -17,11 +17,12 @@ and some form of SASS :). For some detailed tips and tricks, check under the hoo
 `Gruntfile.js`.
 
 - [SASS][2]
-- [Sass-tricks][3] (Will be tag along as bower dependency, should you make use of bower)
+- [Sass-tricks][3] (Will tag along when installing as NPM dependency.)
 
 ## Development
 
-If you want to hack on this code directly, make sure you have installed:
+If you want to hack on this code directly, [fork this repository on github][git] and make
+sure you have the following installed:
 
 - [SASS][2]
 - [NPM][4]
@@ -47,3 +48,5 @@ and open 'http://localhost:8282/'
 [3]: https://github.com/Windgazer-Freelance/sasstricks
 [4]: https://www.npmjs.com/
 [5]: https://github.com/jacobrask/styledocco
+
+[git]: https://github.com/Windgazer-Freelance/simplematerial
