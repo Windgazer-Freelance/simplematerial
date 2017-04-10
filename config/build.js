@@ -6,7 +6,8 @@ grunt.registerTask(//Cleaning, cloning, mkdir, that sorta stuff
         "clean:release",
         "mkdir",
         "gitclone:release",
-        "gitclone:ghpages"
+        "gitclone:ghpages",
+        "clean:preprelease"
     ]
 );
 grunt.registerTask(//Copying, parsing, compiling, you know the drill

@@ -5,6 +5,7 @@ module.exports.tasks = {
                 {
                     expand: true, flatten: false,
                     src: [
+                        "*.md",
                         "**/_*.scss",
                         "!target/**/*",
                         "!config/*",
