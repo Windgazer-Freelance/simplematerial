@@ -1,0 +1,111 @@
+/*
+ # Typography
+ By assuming a base font of 15sp and calculating all other typography relative to this
+ base font, this file contains the same list as the
+ [typography section](http://www.google.com/design/spec/style/typography.html#typography-standard-styles)
+ on the google specs.
+
+```
+<h1 class="a__header--display4">Light 112sp</h1>
+<h1 class="a__header--display3">Regular 56sp</h1>
+<h1 class="a__header--display2">Regular 56sp</h1>
+<h1 class="a__header--display1">Regular 56sp</h1>
+<h1 class="a__headline">Regular 24sp</h1>
+<h1 class="a__header--title">Medium 21sp</h1>
+<h1 class="a__header--subhead">Regular 17sp</h1>
+```
+
+*/
+%a__headers {
+    @extend %reset;
+    @extend %font--header !optional;
+
+    @include e__owl {
+        margin-top: e__sp-to-rem(24);
+    }
+}
+
+/*
+# Display 4
+
+```
+<h1 class="a__header--display4">Light 112sp</h1>
+```
+*/
+%a__header--display4 {
+    @extend %a__headers;
+    font-size: e__sp-to-rem(112);
+    font-weight: 300;
+}
+
+/*
+# Display 3
+
+```
+<h1 class="a__header--display3">Regular 56sp</h1>
+```
+*/
+%a__header--display3 {
+    @extend %a__headers;
+    font-size: e__sp-to-rem(56);
+}
+
+/*
+# Display 2
+
+```
+<h1 class="a__header--display2">Regular 45sp</h1>
+```
+*/
+%a__header--display2 {
+    @extend %a__headers;
+    font-size: e__sp-to-rem(45);
+}
+
+/*
+# Display 1
+
+```
+<h1 class="a__header--display1">Regular 34sp</h1>
+```
+*/
+%a__header--display1 {
+    @extend %a__headers;
+    font-size: e__sp-to-rem(34);
+}
+
+/*
+#Headline
+```
+<h1 class="a__headline">Regular 24sp</h1>
+```
+*/
+%a__header--headline {
+    @extend %a__headers;
+    font-size: e__sp-to-rem(24);
+}
+
+/*
+# Title
+
+```
+<h1 class="a__title">Medium 21sp</h1>
+```
+*/
+%a__header--title {
+    @extend %a__headers;
+    font-size: e__sp-to-rem(21);
+    font-weight: 500;
+}
+
+/*
+# Subhead
+
+```
+<h1 class="a__subhead">Regular 17sp</h1>
+```
+*/
+%a__header--subhead {
+    @extend %a__headers;
+    font-size: e__sp-to-rem(17);
+}

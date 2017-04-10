@@ -1,0 +1,15 @@
+%a__whitespace--container {
+    padding: $b__spacing--related;
+}
+
+%a__whitespace--standalone {
+    padding: $b__spacing--unrelated;
+}
+
+%a__whitespace--dropshadow {
+    margin: 0 $b__spacing--associated $b__spacing--associated 0;
+}
+
+%a__whitespace--inline-block {
+    padding: ($b__spacing--associated * 1.5) ($b__spacing--associated * 2);
+}

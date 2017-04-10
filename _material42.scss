@@ -1,0 +1,14 @@
+/*
+# Material 42
+
+This file includes the opinionated parts of the designs I use for my own apps. They can of
+coursed be used, but even if you disagree with the way I adress the html-linkage, it'll
+serve as a nice example of how to implement the `Simple Material Design` framework.
+*/
+@import "material";
+
+//Organism
+@import "42/o.content";
+@import "42/o.dialog";
+@import "42/o.menu";
+@import "42/o.page";

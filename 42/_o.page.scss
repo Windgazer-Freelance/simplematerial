@@ -1,0 +1,34 @@
+/*
+# Layout
+
+This is an extremely opionionated use of my material design placeholders. However, since I
+want my material design implementation to be simple and ready for the small apps I want to
+work on, I decided to include this layout in the project, but leave it as an optional
+implementation.
+*/
+html,
+body,
+.body {
+    @extend %reset;
+    height: 100%;
+}
+
+body,
+.body {
+    @extend %bodyFont !optional;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    overflow: hidden;
+    position: relative;
+}
+
+p {
+    @extend %reset;
+}
+
+* + p {
+    margin-top: $b__spacing--associated;
+}

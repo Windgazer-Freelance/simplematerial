@@ -1,0 +1,13 @@
+/*
+# Paper drop shadows
+
+These are the most common types of drop shadows we will need. In this file only the
+defaults are defined, by defining your own value before including this partial, any of
+them can be personalised.
+*/
+$b__paper-shadow--raised-bottom: 0 ($b__shadow--offset + $b__shadow--size) $b__shadow--size (-$b__shadow--offset) $b__shadow--color !default;
+$b__paper-shadow--raised-right: ($b__shadow--offset + $b__shadow--size) 0 $b__shadow--size (-$b__shadow--offset) $b__shadow--color !default;
+$b__paper-shadow--raised-left: -($b__shadow--offset + $b__shadow--size) 0 $b__shadow--size (-$b__shadow--offset) $b__shadow--color !default;
+$b__paper-shadow--declined-top: inset $b__paper-shadow--raised-bottom !default;
+$b__paper-shadow--declined-left: inset $b__paper-shadow--raised-right !default;
+$b__paper-shadow--declinedRight: inset $b__paper-shadow--raised-left !default;

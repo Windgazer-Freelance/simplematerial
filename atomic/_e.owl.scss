@@ -1,0 +1,12 @@
+/**
+# Lobotomised Owl, google it ;)
+
+## Targetted owl
+This mixing will allow you to setup things like margins based on an element that follows
+a known element type.
+*/
+@mixin e__owl {
+    & + * {
+        @content;
+    }
+}

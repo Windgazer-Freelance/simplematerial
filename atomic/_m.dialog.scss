@@ -1,0 +1,40 @@
+$b__dialog__color: $b__color--transparent__000;
+
+%m__dialog {
+    @extend %a__paper-shadow--floating;
+    @extend %a__primary-color000;
+    @extend %a__whitespace--standalone;
+    color: transparentize($b__dialog__color, 0.35);
+    left: 50%;
+    max-height: 75vw;
+    max-width: 75vw;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: $b__z-index--dialog;
+}
+
+%m__dialog--hidden {
+    display: none;
+}
+
+%m__dialog--visible {
+    display: block;
+}
+
+%m__dialog__title {
+    @extend %a__header--title;
+    color: $b__dialog__color;
+}
+
+%m__dialog__menu {
+    color: $b__dialog__color;
+    margin: $b__spacing--unrelated (-$b__spacing--unrelated) (-$b__spacing--unrelated);
+    text-align: right;
+    width: auto;
+}
+
+%m__dialog__menu-item {
+    @extend %m__menu--item;
+    display: inline-block;
+}

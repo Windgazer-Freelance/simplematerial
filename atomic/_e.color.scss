@@ -1,0 +1,25 @@
+/**
+# Set Color / Background combination
+
+## Set normal
+This electron is used to set the foreground, border and background color based on the
+presets.
+
+*/
+@mixin e__color--primary($n) {
+    background-color: nth($b__colors--primary, $n);
+    border-color: nth($b__colors--primary, $n);
+    color: nth($b__colors--transparent, $n);
+}
+
+/**
+## Set normal
+This electron is used to set the oposite foreground, border and background color based on
+the presets.
+
+*/
+@mixin e__color--secondary($n) {
+    background-color: nth($b__colors--alternate, $n);
+    border-color: nth($b__colors--alternate, $n);
+    color: nth($b__colors--transparent, $n);
+}

@@ -1,0 +1,136 @@
+/*
+# Buttons and other actions
+
+The following partial mimics to some degree of accuracy the Google Material Design specs
+on [buttons](http://www.google.com/design/spec/components/buttons.html#buttons-usage).
+
+A somewhat 'leading' name for anything that might need to look like a button, but might
+well be just a hyperlink.
+*/
+
+/*
+# Flat Button
+
+```
+<a class="m__actions__cta--flat" href="#dummy">Call to Action</a>
+```
+*/
+%m__actions__cta--flat {
+    @extend %reset;
+    @extend %a__typography--button;
+    @extend %e__ripple;
+    @extend %a__whitespace--dropshadow;
+    @extend %a__whitespace--inline-block;
+    @extend %a__borders__rounding--associated;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*
+## Flat Button Primary Colour
+
+```
+<a class="m__actions__cta--flat-P500" href="#dummy">Call to Action</a>
+```
+*/
+%m__actions__cta--flat-P500 {
+    @extend %m__actions__cta--flat;
+    color: $b__color--primary__500;
+}
+
+/*
+## Flat Button Alternate Colour
+
+```
+<a class="m__actions__cta--flat-A400" href="#dummy">Call to Action</a>
+```
+*/
+%m__actions__cta--flat-A400 {
+    @extend %m__actions__cta--flat;
+    color: $b__color--alternate__400;
+}
+
+/*
+# Floating Action
+```
+<a class="m__actions__cta--floating" href="#dummy">+</a>
+```
+*/
+%m__actions__cta--floating {
+    @extend %m__actions__cta--flat;
+    @extend %a__paper-shadow--floating;
+    border-radius: 50%;
+    line-height: $b__spacing--unrelated;
+    padding: $b__spacing--associated;
+    width: $b__spacing--unrelated;
+}
+
+/*
+## Floating Action Primary Colour
+```
+<a class="m__actions__cta--floating-P500" href="#dummy">+</a>
+```
+*/
+%m__actions__cta--floating-P500 {
+    @extend %m__actions__cta--floating;
+    @extend %a__primary-color500;
+}
+
+/*
+## Floating Action Alternate Colour
+```
+<a class="m__actions__cta--floating-A400" href="#dummy">+</a>
+```
+*/
+%m__actions__cta--floating-A400 {
+    @extend %m__actions__cta--floating;
+    @extend %a__alternate-color400;
+}
+
+/*
+# Raised Button
+
+```
+<a class="m__actions__cta--raised" href="#dummy">Call to Action</a>
+```
+*/
+%m__actions__cta--raised {
+    @extend %m__actions__cta--flat;
+    @extend %a__paper-shadow--raised;
+}
+
+/*
+## Raised Button Primary Colour
+
+```
+<a class="m__actions__cta--raised-P500" href="#dummy">Call to Action</a>
+```
+*/
+%m__actions__cta--raised-P500 {
+    @extend %m__actions__cta--raised;
+    @extend %a__primary-color500;
+}
+
+/*
+## Raised Button Alternate Colour
+
+```
+<a class="m__actions__cta--raised-A400" href="#dummy">Call to Action</a>
+```
+*/
+%m__actions__cta--raised-A400 {
+    @extend %m__actions__cta--raised;
+    @extend %a__alternate-color400;
+}
+
+%m__actions__cta--icon {
+    &::before {
+        @extend %font--icon !optional;
+        display: inline-block;
+        font-weight: normal;
+        margin-right: $b__spacing--associated;
+    }
+}

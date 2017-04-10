@@ -10,8 +10,30 @@
  @requires sasstricks/utils
 */
 
-@import "material/typography";
-@import "material/colours";
-@import "material/paper";
-@import "material/actions";
-@import "material/layout";
+//Electrons
+@import "atomic/e.owl";
+@import "atomic/e.measurement";
+@import "atomic/e.color";
+@import "atomic/e.ripple";
+
+//Bosons
+@import "atomic/b.color";
+@import "atomic/b.measurement";
+@import "atomic/b.paper-shadow";
+@import "atomic/b.z-index";
+
+//Atoms
+@import "atomic/a.borders";
+@import "atomic/a.color";
+@import "atomic/a.header";
+@import "atomic/a.paper";
+@import "atomic/a.typography";
+@import "atomic/a.whitespace";
+
+//Molecules
+@import "atomic/m.actions";
+@import "atomic/m.content";
+@import "atomic/m.dialog";
+@import "atomic/m.menu";
+
+//Organisms

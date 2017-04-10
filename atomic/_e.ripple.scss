@@ -1,0 +1,66 @@
+/*
+# Ripple Effect
+
+To get some advanced usability into the mix, the following SCSS defines the 'ripple'
+effect most people have come to expect of material design implementations. Since I do
+agree that it is terribly user friendly and should be implemented :)
+
+The effect is implemented for any of the actions defined in this partial. For optimal
+effect it'll need some aditional JavaScript. In it's plain working it'll always ripple
+from the center of the element. Using a simple script will allow the ripple to start from
+the point of touch.
+
+The intend is to mimic to a reasonable degree the specification by google:
+http://www.google.com/design/spec/animation/responsive-interaction.html
+
+*/
+
+%e__ripple--bgcircle {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="currentColor" fill-opacity="0.25"/></svg>');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+%e__ripple--touchdot {
+    @extend %e__ripple--bgcircle;
+    height: 1em;
+    margin: -0.5em;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 250ms ease-in 250ms;
+    width: 1em;
+
+    &.on {
+        opacity: 1;
+        transition: none;
+    }
+}
+
+%e__ripple--active {
+    @at-root {
+        @keyframes e__ripple--animation {
+            0% {
+                background-size: 120%;
+            }
+            100% {
+                background-size: 0;
+            }
+        }
+    }
+    animation-delay: 1s;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards; //override existing transitions
+    animation-name: e__ripple--animation;
+    background-position: 50% 50% !important;
+    background-size: 110%;
+    transition: background-size 250ms ease-in, background-position 50ms ease-in 200ms;
+}
+
+%e__ripple {
+    @extend %e__ripple--bgcircle;
+    background-size: 0;
+    &:focus {
+        @extend %e__ripple--active;
+    }
+}
