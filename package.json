@@ -13,7 +13,7 @@
     "email": "martin@windgazer.nl",
     "url": "http://www.windgazer.nl/"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "build": {
     "target": "target/release.git"
   },
