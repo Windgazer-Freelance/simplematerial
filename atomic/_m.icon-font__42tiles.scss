@@ -1,0 +1,69 @@
+$b__font-url--42tiles: '../static/font/42tiles.woff2' !default;
+
+/*
+#42tiles implementation
+
+Implementing 42tiles font as icon-font for my material design and providing some presets
+for button icons.
+*/
+%font--icon {
+    font-family: '42tiles';
+
+    @at-root {
+        @font-face {
+            font-family: '42tiles';
+            font-style: normal;
+            font-weight: normal;
+            src: url($b__font-url--42tiles);
+        }
+    }
+}
+
+/*
+# Predefined icons
+
+In the near future I would like to implement a set of predefined icons based on the set of
+[materials design icons on github](https://github.com/google/material-design-icons).
+*/
+
+%m__cta--icon-reload {
+    @extend %m__actions__cta--icon;
+    &::before {
+        content: "\e802";
+    }
+}
+
+%m__cta--icon-game {
+    @extend %m__actions__cta--icon;
+    &::before {
+        content: "\e900";
+    }
+}
+
+%m__cta--icon-stats {
+    @extend %m__actions__cta--icon;
+    &::before {
+        content: "\e901";
+    }
+}
+
+%m__cta--icon-achievements {
+    @extend %m__actions__cta--icon;
+    &::before {
+        content: "\e902";
+    }
+}
+
+%m__cta--icon-settings {
+    @extend %m__actions__cta--icon;
+    &::before {
+        content: "\e903";
+    }
+}
+
+%m__cta--icon-license {
+    @extend %m__actions__cta--icon;
+    &::before {
+        content: "`";
+    }
+}

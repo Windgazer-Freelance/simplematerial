@@ -1,0 +1,14 @@
+%m__content {
+    @extend %a__paper-fibres;
+    @extend %a__primary-color000;
+    @extend %a__whitespace--container;
+    @extend %bodyFont !optional;
+    bottom: 0;
+    box-sizing: border-box;
+    left: $b__menu-width;
+    overflow: auto; //articles are meant to be full-screen
+    overflow-x: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

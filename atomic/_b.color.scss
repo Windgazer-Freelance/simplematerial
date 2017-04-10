@@ -1,0 +1,53 @@
+/*
+# Colors
+
+These are a basic colour setup based on the google Material Design
+[colour specification](http://www.google.com/design/spec/style/color.html#color-ui-color-application).
+
+Any of the colours defined here are simply defaults and can be overwritten by defining
+them before importing the `_colours.scss` file.
+
+```
+<h1 class="a__primary-color500">Primary</h1>
+<dl>
+    <dt class="a__primary-color100">100</dt>
+    <dd class="a__primary-color100">#F44336</dd>
+    <dt class="a__primary-color500">500</dt>
+    <dd class="a__primary-color500">#F44336</dd>
+    <dt class="a__primary-color700">700</dt>
+    <dd class="a__primary-color700">#F44336</dd>
+</dl>
+<h1 class="a__alternate-color400">Accent</h1>
+<dl>
+    <dt class="a__alternate-color100">100</dt>
+    <dd class="a__alternate-color100">#F44336</dd>
+    <dt class="a__alternate-color200">200</dt>
+    <dd class="a__alternate-color200">#F44336</dd>
+    <dt class="a__alternate-color400">400</dt>
+    <dd class="a__alternate-color400">#F44336</dd>
+</dl>
+```
+*/
+$b__color--primary__700: #D32F2F !default;
+$b__color--primary__500: #F44336 !default;
+$b__color--primary__100: #FFCDD2 !default;
+$b__color--primary__000: #FFFFFF !default;
+$b__colors--primary: $b__color--primary__000 $b__color--primary__100 $b__color--primary__500 $b__color--primary__700;
+
+$b__color--alternate__400: #BDBDBD !default;
+$b__color--alternate__200: #EEEEEE !default;
+$b__color--alternate__100: #F5F5F5 !default;
+$b__colors--alternate: $b__color--alternate__100 $b__color--alternate__200 $b__color--alternate__400;
+
+$b__color--transparent__700: white !default;
+$b__color--transparent__500: $b__color--transparent__700 !default;
+$b__color--transparent__100: #000000 !default;
+$b__color--transparent__000: #000000 !default;
+$b__colors--transparent: $b__color--transparent__000 $b__color--transparent__100 $b__color--transparent__500 $b__color--transparent__700;
+
+$b__color--alternate-transparent__400: white !default;
+$b__color--alternate-transparent__200: $b__color--alternate-transparent__400 !default;
+$b__color--alternate-transparent__100: $b__color--alternate-transparent__200 !default;
+$b__colors--alternate-transparent: $b__color--alternate-transparent__100 $b__color--alternate-transparent__200 $b__color--alternate-transparent__400;
+
+$b__shadow--color: rgba(0, 0, 0, 0.25) !default;

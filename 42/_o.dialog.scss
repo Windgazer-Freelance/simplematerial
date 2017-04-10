@@ -1,0 +1,89 @@
+/*
+#Dialogs
+
+I've chosen, probably to the outrage of many, to use the `nav` element to represent simple
+dialogs. Dialogs are intended to be hovering windows with control-buttons.
+
+Attempting to get as close as possible to the concepts as details on Google's Material
+Design [specifications on dialogs](http://www.google.com/design/spec/components/dialogs.html).
+
+```
+<nav class="show">
+    <h1>Do you use titles sparingly?</h1>
+    <p>This text-body should in most cases adequately state your request for feedback.</p>
+    <menu>
+        <li><a href="#test">Cancel</a></li>
+        <li><a href="#test">Ok</a></li>
+    </menu>
+</nav>
+```
+*/
+nav {
+    @extend %m__dialog;
+    @extend %a__primary-color000;
+    @extend %m__dialog--hidden;
+
+    &.show {
+        @extend %m__dialog--visible;
+    }
+
+    > h1 {
+        @extend %m__dialog__title;
+    }
+
+    > menu {
+        @extend %m__dialog__menu;
+
+        > li {
+            @extend %m__dialog__menu-item;
+
+            > a {
+                @extend %m__actions__cta--flat-P500;
+            }
+        }
+    }
+}
+
+/*
+# Sneaky gradient overlay
+
+In my apps I have my branding inside an `em` element which is a sibling to my dialogs. As
+such I can abuse this branding to create my gradient overlay, preventing users from
+interacting with the background, while the dialog is active.
+
+```
+<main class="body">
+    <menu>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+    </menu>
+    <article id="__preview__">
+        <h1>Some testing required!</h1>
+        <p>This is just a test layout. Should be easy to use in my HTML5 app development.</p>
+    </article>
+    <article id="about">
+        <h1>Some explaining required!</h1>
+        <p>Just a simple way of navigating between pages, without any need for javascript</p>
+    </article>
+    <nav class="show">
+        <p>This is a quick and dirty solution, do you like it?.</p>
+        <menu>
+            <li><a href="#test">No</a></li>
+            <li><a href="#test">Yes</a></li>
+        </menu>
+    </nav>
+    <em class="branding">Windgazer</em>
+</main>
+```
+*/
+nav.show ~ em {
+    background-color: transparentize($b__color--transparent__000, 0.6);
+    margin-left: -100em;
+    margin-top: -100em;
+    padding-left: 100em;
+    padding-top: 100em;
+    text-shadow:
+        1px  1px rgba(255, 255, 255, 0.1),
+        -1px -1px rgba(255, 255, 255, 0.1);
+    z-index: 19;
+}

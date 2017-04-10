@@ -5,11 +5,11 @@ module.exports.tasks = {
                 {
                     expand: true, flatten: false,
                     src: [
-                        "bower.json",
+                        "*.md",
                         "**/_*.scss",
                         "!target/**/*",
                         "!config/*",
-                        "!libs/**/*.scss"
+                        "!node_modules/**/*.scss"
                     ],
                     dest: "target/release.git/"
                 }

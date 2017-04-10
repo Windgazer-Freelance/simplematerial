@@ -1,0 +1,34 @@
+/*
+#Font Awesome example implementation
+
+In this example implementation Font Awesome is loading from cloudflare and some icons have
+been set up for use with CTA's. It attempts to highlight how to integrate an icon font
+with this material design implementation.
+*/
+%font--icon {
+    font-family: 'FontAwesome';
+
+    @at-root {
+        @font-face {
+            font-family: 'FontAwesome';
+            font-style: normal;
+            font-weight: normal;
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2');
+        }
+    }
+}
+
+/*
+# Buttons with icon
+
+```
+<a class="m__actions__cta--flat-download" href="#dummy">Call to Action</a>
+<a class="m__actions__cta--raised-download" href="#dummy">Call to Action</a>
+```
+*/
+%m__cta--icon-download {
+    @extend %m__actions__cta--icon;
+    &::before {
+        content: "\f019";
+    }
+}
