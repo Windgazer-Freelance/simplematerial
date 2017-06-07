@@ -21,7 +21,7 @@
     "target": "target/wiki.git"
   },
   "dependencies": {
-      "Sasstricks": "github:windgazer-freelance/sasstricks"
+      "sasstricks": "github:windgazer-freelance/sasstricks"
   },
   "devDependencies": {
     "grunt": "^1.0.0",
