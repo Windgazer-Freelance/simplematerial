@@ -40,7 +40,6 @@
   },
   "engine": "node 0.8.12",
   "scripts": {
-    "install": "bower install;grunt",
     "release": "grunt release"
   },
   "repository": {
