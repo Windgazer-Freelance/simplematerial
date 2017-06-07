@@ -20,9 +20,10 @@
   "wiki": {
     "target": "target/wiki.git"
   },
-  "dependencies": {},
+  "dependencies": {
+      "Sasstricks": "github:windgazer-freelance/sasstricks"
+  },
   "devDependencies": {
-    "Sasstricks": "github:windgazer-freelance/sasstricks",
     "grunt": "^1.0.0",
     "grunt-bumpup": "^0.6.2",
     "grunt-contrib-clean": "^1.0.0",
